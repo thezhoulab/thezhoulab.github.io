@@ -49,12 +49,6 @@ Graduate Student:
     img: Guangtao_Xu.jpg
     email: gfx5015@psu.edu
     year: 2022.5
-  - name: Xuye Wang
-    education: M.S. Medical Science, Kyoto University/B.S. Pharmacy, Central South University 
-    interest: Super-resolution imaging methods, Neurodegenerative diseases
-    img: Xuye_Wang2.jpg
-    email: xfw5203@psu.edu
-    year: 2023
   - name: Yuanmin Zheng
     education: M.S. Bioscience, King Abdullah University of Science and Technology / B.E. Bioengineering, Beijing University of Chemical Engineering
     interest: Structure Biology, Cellular & Neural Biology, Bioimaging 
@@ -79,6 +73,13 @@ Graduate Student:
     img: Ruisheng_Xu.jpg
     email: rbx5039@psu.edu
     year: 2024
+  - name: Shaoqing Zhang
+    education: M.S. Pharmacology, Fudan University.
+    interest: STORM, contact sites, neurology, oncology pharmacology, PROTACT technology. 
+    img: Shaoqing_Zhang.jpg
+    email: sfz5297@psu.edu
+    year: 2024
+    
 
 
 Undergraduate Student:
@@ -124,7 +125,7 @@ Alumni:
     img: Poom_Chantarapornrat.jpeg
     email: poom@psu.edu
     current: Graduate Student at Boston University
-  - name: Mengde Liu
+  - name: Mengde Liu  
     education: B.S. Biomedical Engineering, Penn State University
 #    interest: Machine learning, Super-resolution imaging methods
     img: Mengde_Liu.jpeg
