@@ -7,6 +7,15 @@
 #   page:
 #   type:
 
+- author: J Gao, H Li, S Tan, R Zhou, T.-H. Lee
+  title: Roles of histone chaperone Nap1 and histone acetylation in regulating phase-separation of chromatin arrays.
+  publisher: Biorxiv
+  type: 2
+  page: 
+  year: 2025.5
+  img: wbsi.svg
+  link: https://www.biorxiv.org/content/10.1101/2025.05.09.653121v2
+  
 - author: J Fei, R Zhou#. 
   title: Watching biomolecules stride in real time.
   publisher: Science 
