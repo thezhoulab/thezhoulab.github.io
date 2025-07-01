@@ -7,15 +7,23 @@
       {% assign other_author = pub.author | split: author %}
       <p>
   {% assign authors = pub.author | split: "," %}
-  {% for a in authors %}
-    {% assign name = a | strip %}
-    {% if author_list contains name %}
-      <span style="color: #74b9ff; font-weight:bold">{{ name }}</span>
-    {% else %}
-      {{ name }}
+{% for a in authors %}
+  {% assign name = a | strip | remove: "." | downcase %}
+  {% assign found = false %}
+  {% for special in author_list %}
+    {% assign special_clean = special | remove: "." | downcase %}
+    {% if name == special_clean %}
+      {% assign found = true %}
     {% endif %}
-    {% unless forloop.last %}, {% endunless %}
   {% endfor %}
+
+  {% if found %}
+    <span style="color: #74b9ff; font-weight:bold">{{ a | strip }}</span>
+  {% else %}
+    {{ a | strip }}
+  {% endif %}
+  {% unless forloop.last %}, {% endunless %}
+{% endfor %}
   <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span>
   <span> {{pub.page}}</span>
   <span> ({{pub.year}})</span>
