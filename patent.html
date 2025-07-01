@@ -7,7 +7,7 @@ permalink: /patents
 # Patents
 
 <ul>
-{% assign patents = site.data.pubs | where:"type","patent" | sort: "year" | reverse %}
+{% assign patents = site.data.patents | where:"type","patent" | sort: "year" | reverse %}
 {% for p in patents %}
   <li>
     <strong>{{ p.title }}</strong><br>
