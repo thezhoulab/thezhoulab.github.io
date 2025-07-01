@@ -5,7 +5,21 @@
     <div class="pub_left" {% unless {{pub.img}} %} style="width: 1000px;" {% endunless %}>
       <p><a href={{pub.link}}><span>{{pub_num}}. {{pub.title}}</span></a></p>
       {% assign other_author = pub.author | split: author %}
-      <p><span>{{other_author[0]}}</span><b style="color: #74b9ff">{{author}}</b><span>{{other_author[1]}}</span><span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span><span> {{pub.page}}</span></span><span> ({{pub.year}})</span></p>
+      <p>
+  {% assign authors = pub.author | split: "," %}
+  {% for a in authors %}
+    {% assign name = a | strip %}
+    {% if author_list contains name %}
+      <span style="color: #74b9ff; font-weight:bold">{{ name }}</span>
+    {% else %}
+      {{ name }}
+    {% endif %}
+    {% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span>
+  <span> {{pub.page}}</span>
+  <span> ({{pub.year}})</span>
+</p>
 
       {% if pub.highlight %}
       <p style="font-size: 10px"><a href={{pub.highlight.link}}>Highlighted in <span style="font-style: italic; font-weight: bold;">{{pub.highlight.publisher}} </span>{{pub.highlight.page}} ({{pub.highlight.year}}): {{pub.highlight.title}} </a></p>
