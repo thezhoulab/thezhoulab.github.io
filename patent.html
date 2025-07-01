@@ -1,0 +1,18 @@
+---
+layout: default
+title: Patents
+permalink: /patents
+---
+
+# Patents
+
+<ul>
+{% assign patents = site.data.pubs | where:"type","patent" | sort: "year" | reverse %}
+{% for p in patents %}
+  <li>
+    <strong>{{ p.title }}</strong><br>
+    {{ p.author }}<br>
+    {{ p.publisher }} {{ p.page }} ({{ p.year }})
+  </li>
+{% endfor %}
+</ul>
