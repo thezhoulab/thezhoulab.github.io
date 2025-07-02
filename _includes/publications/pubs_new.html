@@ -1,0 +1,80 @@
+{%- comment -%}
+  入参：
+    include.pubs        — 要渲染的 publication 列表
+    include.author_list — 要高亮的作者名单数组
+    include.pub_num     — 当前列表的起始编号
+{%- endcomment -%}
+
+<div id="pubs">
+  {%- for pub in include.pubs -%}
+    <div class="pub" {% unless pub.img %} style="height:100px; margin-bottom:-5px;" {% endunless %}>
+      <div class="pub_left" {% unless pub.img %} style="width:1000px;" {% endunless %}>
+        <p>
+          <a href="{{ pub.link }}">
+            <span>{{ include.pub_num }}. {{ pub.title }}</span>
+          </a>
+        </p>
+        <p>
+          {%- comment -%} 拆分作者 {%- endcomment -%}
+          {% assign authors = pub.author | split: "," %}
+          {% for a in authors %}
+            {% assign name = a | strip | remove: "." | downcase %}
+            {% assign found = false %}
+            {%- comment -%} 在 author_list 中查找匹配 {%- endcomment -%}
+            {% for special in include.author_list %}
+              {% assign special_clean = special | remove: "." | downcase %}
+              {% if name == special_clean %}
+                {% assign found = true %}
+              {% endif %}
+            {% endfor %}
+            {%- comment -%} 根据 found 决定样式 {%- endcomment -%}
+            {% if found %}
+              <span style="color:#74b9ff; font-weight:bold">{{ a | strip }}</span>
+            {% else %}
+              {{ a | strip }}
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          <span style="font-style:italic; font-weight:bold;"> {{ pub.publisher }}</span>
+          <span> {{ pub.page }}</span>
+          <span> ({{ pub.year }})</span>
+        </p>
+
+        {% if pub.highlight %}
+          <p style="font-size:10px">
+            <a href="{{ pub.highlight.link }}">
+              Highlighted in <span style="font-style:italic; font-weight:bold;">{{ pub.highlight.publisher }}</span>
+              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+            </a>
+          </p>
+        {% endif %}
+
+        {% if pub.selected %}
+          <p style="font-size:10px">
+            <a href="{{ pub.selected.link }}">
+              Selected as: <span style="font-style:italic; font-weight:bold;">
+                {{ pub.selected.description }}
+              </span>
+            </a>
+          </p>
+        {% endif %}
+      </div>
+
+      {%- comment -%} 可选的缩略图 {%- endcomment -%}
+      {% if pub.img %}
+        {% if include.background == 1 %}
+          <div class="pub_background">
+            <img src="assets/images/pubs/{{ pub.img }}" alt="{{ pub.title }}">
+          </div>
+        {% else %}
+          <div class="pub_right">
+            <img class="pub_img" src="assets/images/pubs/{{ pub.img }}" alt="{{ pub.title }}">
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    {%- comment -%} 递减编号 {%- endcomment -%}
+    {% assign include.pub_num = include.pub_num | minus: 1 %}
+  {%- endfor -%}
+</div>
