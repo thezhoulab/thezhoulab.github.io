@@ -6,13 +6,12 @@ permalink: /patents
 
 # Patents
 
-<ul>
-{% assign patents = site.data.patents | where:"type","patent" | sort: "year" | reverse %}
-{% for p in patents %}
-  <li>
-    <strong>{{ p.title }}</strong><br>
-    {{ p.author }}<br>
-    {{ p.publisher }} {{ p.page }} ({{ p.year }})
-  </li>
-{% endfor %}
-</ul>
+{%- assign all_pubs   = site.data.pubs | sort: 'year' -%}
+{%- assign patents    = all_pubs | where: "type", "patent" | sort: 'year' | reverse -%}
+{%- assign patent_num = patents.size -%}
+{% assign author_list = "R Zhou|H Li|B Ran|J Fei" | split:"|" %}
+
+{% include publications/patents.html 
+     patents=patents 
+     author_list=author_list 
+     patent_num=patent_num %}
