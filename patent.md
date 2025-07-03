@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: Dark
 title: Patents
 permalink: /patents
 ---
