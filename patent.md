@@ -6,7 +6,7 @@ permalink: /patents
 
 # Patents
 
-{%- assign all_pubs   = site.data.pubs | sort: 'year' -%}
+{%- assign all_pubs   = site.data.patents | sort: 'year' -%}
 {%- assign patents    = all_pubs | where: "type", "patent" | sort: 'year' | reverse -%}
 {%- assign patent_num = patents.size -%}
 {% assign author_list = "R Zhou|H Li|B Ran|J Fei" | split:"|" %}
