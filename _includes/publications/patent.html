@@ -1,11 +1,4 @@
-{%- comment -%}
-_include: publications/patents.html
-参数：
-  include.patents       — 专利列表
-  include.author_list   — 要高亮的作者数组
-  include.patent_num    — 起始编号
-{%- endcomment -%}
-
+<!-- _includes/publications/patents.html -->
 <div id="patents">
   {%- for patent in include.patents -%}
     <div class="patent">
@@ -15,19 +8,14 @@ _include: publications/patents.html
         </a>
       </p>
       <p>
-        {%- comment -%} 拆分作者 {%- endcomment -%}
         {% assign authors = patent.author | split: "," %}
         {% for a in authors %}
           {% assign name = a | strip | remove: "." | downcase %}
           {% assign found = false %}
-          {%- comment -%} 在 author_list 中查找匹配 {%- endcomment -%}
           {% for special in include.author_list %}
             {% assign special_clean = special | remove: "." | downcase %}
-            {% if name == special_clean %}
-              {% assign found = true %}
-            {% endif %}
+            {% if name == special_clean %}{% assign found = true %}{% endif %}
           {% endfor %}
-          {%- comment -%} 根据 found 决定样式 {%- endcomment -%}
           {% if found %}
             <span style="color:#74b9ff; font-weight:bold">{{ a | strip }}</span>
           {% else %}
@@ -42,7 +30,6 @@ _include: publications/patents.html
         <span> {{ patent.page }}</span>
       </p>
     </div>
-    {%- comment -%} 递减编号 {%- endcomment -%}
     {% assign include.patent_num = include.patent_num | minus: 1 %}
   {%- endfor -%}
 </div>
