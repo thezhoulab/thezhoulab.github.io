@@ -9,7 +9,7 @@ permalink: /patents
 {%- assign all_pubs   = site.data.patents | sort: 'year' -%}
 {%- assign patents    = all_pubs | where: "type", "patent" | sort: 'year' | reverse -%}
 {%- assign patent_num = patents.size -%}
-{% assign author_list = "R Zhou|H Li|B Ran|J Fei" | split:"|" %}
+{% assign author_list = "R Zhou|H Zhang" | split:"|" %}
 
 {% include publications/patents.html 
      patents=patents 
