@@ -12,7 +12,7 @@ title: Publications
 
 {%- assign pubs = all_pubs | where: "type", "2" | sort: 'years' | reverse -%}
 <h1>Independent Career: </h1> 
-{% include publications/pubs_left.html %}
+{% include publications/pubs_left.html l_authors=l_authors %}
 
 
 <h1 style="margin-top: 50px">Prior to Penn State:</h1>
@@ -23,4 +23,4 @@ title: Publications
 {%- assign pubs = all_pubs | where: "type", "0" | sort: 'year' | reverse %}
 {%- assign pub_num = pubs.size -%}
 <h2>Other publications: </h2>
-{% include publications/pubs_bottom.html %}
+{% include publications/pubs_bottom.html l_authors=l_authors %}
