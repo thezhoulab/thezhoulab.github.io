@@ -21,25 +21,35 @@
       {% assign authors = pub.author | split: ", " %}
       {% assign year = pub.year | split: "." %}
       <p>
-
-      {% for author in authors %}
-        {% assign is_lab_author = false %}
-        {% for l_author in l_authors %}
-          {% if author contains l_author %}
-            {% assign is_lab_author = true %}
-            {% break %}
+        {# 首先，将 "and" 替换为逗号，以统一分隔符 #}
+        {% assign author_string = pub.author | replace: " and ", ", " %}
+      
+        {# 接着，将标准化后的字符串分割成一个作者数组 #}
+        {% assign authors = author_string | split: "," %}
+      
+        {# 循环遍历每位作者，进行显示和高亮检查 #}
+        {% for author_raw in authors %}
+          {# 为便于比较，清理作者名：移除空格、# 和 . #}
+          {% assign author_clean = author_raw | strip | remove: "#" | remove: "." %}
+          
+          {% assign is_lab_author = false %}
+          {% for l_author in l_authors %}
+            {% if author_clean contains l_author %}
+              {% assign is_lab_author = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+      
+          {% if is_lab_author == true %}
+            <b class="author">{{ author_raw }}</b>
+          {% else %}
+            <span>{{ author_raw }}</span>
           {% endif %}
+          {% unless forloop.last %}, {% endunless %}
         {% endfor %}
       
-        {% if is_lab_author == true %}
-          <b class="author">{{ author }}</b>
-        {% else %}
-          <span>{{ author }}</span>
-        {% endif %}
-        {% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-
-      <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span><span> {{pub.page}}</span></span><span> ({{year[0]}})</span></p>
+        <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span><span> {{pub.page}}</span></span><span> ({{year[0]}})</span>
+      </p>
 
       {% if pub.highlight %}
       <p style="font-size: 10px"><a href={{pub.highlight.link}}>Highlighted in <span style="font-style: italic; font-weight: bold;">{{pub.highlight.publisher}} </span>{{pub.highlight.page}} ({{pub.highlight.year}}): {{pub.highlight.title}} </a></p>
