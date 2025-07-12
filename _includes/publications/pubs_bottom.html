@@ -10,22 +10,22 @@
       {% assign year = pub.year | split: "." %}
       <p>
 
-      {% for author in authors: %}
-          {% assign lab = false %}
-          {% for l_author in l_authors: %}
-            {% if author contains l_author %}
-              {% assign lab = true %}
-            {% endif %}
-          {% endfor %}
-
-          {% if lab == true %}
-            <b class="author">{{author}}</b>
-          {% else %}
-            <span>{{author}}</span>
-          {% endif%}
-          {% if forloop.last == false %}<span>, </span>{% endif %}
+      {% for author in authors %}
+        {% assign is_lab_author = false %}
+        {% for l_author in l_authors %}
+          {% if author contains l_author %}
+            {% assign is_lab_author = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      
+        {% if is_lab_author == true %}
+          <b class="author">{{ author }}</b>
+        {% else %}
+          <span>{{ author }}</span>
+        {% endif %}
+        {% unless forloop.last %}, {% endunless %}
       {% endfor %}
-
       <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span><span> {{pub.page}}</span></span><span> ({{year[0]}})</span></p>
 
       {% if pub.highlight %}
