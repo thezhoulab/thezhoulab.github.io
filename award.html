@@ -6,12 +6,7 @@ permalink: /award
 ---
 
 <h1>Awards</h1>
-
-{% comment %}
-  此处假设您的奖项数据位于 _data/awards.yml 文件中，
-  并按 'time' 字段降序（最新在前）排列。
-{% endcomment %}
-{% assign awards_list = site.data.awards | sort: 'time' | reverse %}
+{% assign awards_list = site.data.Awards | sort: 'time' | reverse %}
 
 {% for award in awards_list %}
   <div id="member" style="margin-bottom: 2rem;">
@@ -21,7 +16,7 @@ permalink: /award
     <div id="member-inf">
       <h2>{{ award.name }}</h2>
       <h3>{{ award.description }}</h3>
-      <p>日期: {{ award.time | date: "%B %Y" }}</p>
+      <p>time: {{ award.time | date: "%B %Y" }}</p>
     </div>
   </div>
 {% endfor %}
