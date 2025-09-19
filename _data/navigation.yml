@@ -2,12 +2,14 @@
   link: /
 - name: News
   link: /news
-- name: Publications
-  link: /pubs
-- name: Patents
-  link: /patents
-- name: Research
-  link: /research
+- name: Research & Innovation
+  subs:
+    - name: Publications
+      link: /pubs
+    - name: Patents
+      link: /patents
+    - name: Research
+      link: /research
 - name: Education
   link: /teaching
 - name: Team
