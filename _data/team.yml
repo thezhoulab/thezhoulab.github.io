@@ -12,11 +12,6 @@ Research Staff Assistant:
     email: jdw306@psu.edu
 
 Postdoctoral Researcher:
-  - name: Hongyun Li
-    education: Ph.D. Chemistry, Wuhan University
-    interest: T-Cell activation, Super-resolution imaging
-    img: Hongyun_Li.jpg
-    email: hfl5378@psu.edu
 
 Graduate Student:
   - name: Han Zhang
@@ -61,12 +56,12 @@ Graduate Student:
     email: yinqiwang125@psu.edu
     img: Yinqi_Wang.jpg
     year: 2023
-  - name: Qingyan Yang
-    education: B.S. Biological Sciences, University of Science and Technology of China
-    interest: Immunology,  Super-resolution imaging
-    email: yzq5088@psu.edu
-    img: QingYan_Yang_2.png
-    year: 2024
+  # - name: Qingyan Yang
+  #   education: B.S. Biological Sciences, University of Science and Technology of China
+  #   interest: Immunology,  Super-resolution imaging
+  #   email: yzq5088@psu.edu
+  #   img: QingYan_Yang_2.png
+  #   year: 2024
   - name: Ruisheng Xu
     education: M.S. Biochemical Engineering, East China University of Science and Technology. / B.S. Bioengineering, East China University of Science and Technology.
     interest: Super-resolution imaging, Cellular biology
@@ -79,12 +74,12 @@ Graduate Student:
     img: Shaoqing_Zhang.jpg
     email: sfz5297@psu.edu
     year: 2024
-  - name: Weilin Wang
-    education: B.S. Biological Sciences, University of Science and Technology of China
-    interest: Live Cell RNA Imaging
-    img: Weilin.jpg
-    email: wbw5279@psu.edu
-    year: 2024
+  # - name: Weilin Wang
+  #   education: B.S. Biological Sciences, University of Science and Technology of China
+  #   interest: Live Cell RNA Imaging
+  #   img: Weilin.jpg
+  #   email: wbw5279@psu.edu
+  #   year: 2024
     
     
 
@@ -101,12 +96,12 @@ Undergraduate Student:
     major: Chemistry
     img: Rowan_Cothren.jpeg
     email: rzc5560@psu.edu
-  - name: Muyu Pan
-    education: Class of 2026, Penn State University
-    interest: Bimolecular condensate
-    major: Chemistry
-    img: Muyu_Pan.jpeg
-    email: mfp5696@psu.edu
+  # - name: Muyu Pan
+  #   education: Class of 2026, Penn State University
+  #   interest: Bimolecular condensate
+  #   major: Chemistry
+  #   img: Muyu_Pan.jpeg
+  #   email: mfp5696@psu.edu
   - name: Ebenezer Karikari
     education: Class of 2026, Penn State University
     interest: Super-resolution imaging and Neuro-oncology
@@ -118,14 +113,15 @@ Undergraduate Student:
     interest: Virotherapy and oncology
     email: cgl5200@psu.edu
     img: Caden_LaLonde.jpg
-  - name: Milap Atul Mistry
-    education: Class of 2026, Penn State University
-    interest: Medicinal Biochemistry & Neurodegenerative Diseases
-    img: Milap_Atul_Mistry.jpg
-    email: mvm6804@psu.edu
+
 
 
 Alumni:
+  - name: Hongyun Li
+    education: Ph.D. Chemistry, Wuhan University
+    interest: T-Cell activation, Super-resolution imaging
+    img: Hongyun_Li.jpg
+    current: Emory University
   - name: Poom Chantarapornrat
     education: Class of 2023, Penn State University
     major: Chemistry 
@@ -136,5 +132,9 @@ Alumni:
     education: B.S. Biomedical Engineering, Penn State University
 #    interest: Machine learning, Super-resolution imaging methods
     img: Mengde_Liu.jpeg
-    email: mbl5592@psu.edu
     current: Graduate Student at Duke University
+  - name: Milap Atul Mistry
+    education: Class of 2025, Penn State University
+    interest: Medicinal Biochemistry & Neurodegenerative Diseases
+    img: Milap_Atul_Mistry.jpg
+    current: MS1 at Penn State College of Medicine
