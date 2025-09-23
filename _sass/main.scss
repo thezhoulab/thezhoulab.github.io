@@ -91,6 +91,21 @@ body  div{
 	margin-right: 30px;
 }
 
+.award_img{
+  min-height: 120px;
+  width: 200px;
+  object-fit: contain;
+  color: white;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 30px;
+}
+
+.award_img:hover{
+  z-index: 10;
+  width: auto;
+  height: 400px;
+}
 
 #member-info{
 	float: left;

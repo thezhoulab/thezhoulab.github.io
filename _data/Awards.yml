@@ -21,5 +21,8 @@
 - time: 2025/5
   name: Yuanmin Zheng
   description: the Harry G. Miller Fellowship
-  img:
+- time: 2025/9
+  name: Jinyu Fei
+  description: American Society for Cell Biology (ASCB) Travel Grant Award
+  img: ascb_logo.png
 

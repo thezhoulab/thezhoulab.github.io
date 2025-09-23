@@ -12,16 +12,16 @@ permalink: /award
   <div id="member" style="margin-bottom: 2rem;">
     {% comment %} 如果奖项有图片，则显示该图片 {% endcomment %}
     {% if award.img and award.img != "" %}
-      <img alt="{{award.name}}" class="avatar" src="/assets/images/awards/{{award.img}}">
+      <img alt="{{award.name}}" class="award_img" src="/assets/images/awards/{{award.img}}">
     {% comment %} 如果没有图片，则显示一张透明的占位图 {% endcomment %}
     {% else %}
-      <img alt="{{award.name}}" class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+      <img alt="{{award.name}}" class="award_img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
     {% endif %}
 
     <div id="member-inf">
       <h2>{{ award.name }}</h2>
       <h3>{{ award.description }}</h3>
-      <p>time: {{ award.time | date: "%B %Y" }}</p>
+      <p>Time: {{ award.time | date: "%B %Y" }}</p>
     </div>
   </div>
 {% endfor %}
