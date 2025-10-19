@@ -50,12 +50,12 @@ Graduate Student:
     email: ykz5611@psu.edu
     img: Yuanmin_Zheng.jpg
     year: 2023
-  - name: Yinqi Wang
-    education: B.S. Chemistry，University of Science and Technology of China
-    interest: Developing novel fluorescent probes and super-resolution imaging methods
-    email: yinqiwang125@psu.edu
-    img: Yinqi_Wang.jpg
-    year: 2023
+  # - name: Yinqi Wang
+  #   education: B.S. Chemistry，University of Science and Technology of China
+  #   interest: Developing novel fluorescent probes and super-resolution imaging methods
+  #   email: yinqiwang125@psu.edu
+  #   img: Yinqi_Wang.jpg
+  #   year: 2023
   # - name: Qingyan Yang
   #   education: B.S. Biological Sciences, University of Science and Technology of China
   #   interest: Immunology,  Super-resolution imaging

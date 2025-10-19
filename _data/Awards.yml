@@ -1,7 +1,7 @@
-- time: 2023/11
-  name: Yinqi Wang
-  description: Brucher Paler Fay Scholarship
-  img:
+# - time: 2023/11
+#   name: Yinqi Wang
+#   description: Brucher Paler Fay Scholarship
+#   img:
 - time: 2025/5
   name: Han Zhang
   description: Best Image Poster Award, 2025 Single-Molecule MiniSymposium
@@ -31,5 +31,9 @@
 - time: 2025/9
   name: Han Zhang
   description: Harry and Catharine Dalalian Graduate Fellowship in Organic Chemistry
+- time: 2025/10
+  name: Yuanmin Zheng
+  description: Certificate of recognition for the 2025 Cancer Research Day People's Choice Poster
+  img: ym1.jpg
 
 
