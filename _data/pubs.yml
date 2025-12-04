@@ -7,9 +7,29 @@
 #   page:
 #   type:
 
+- author: Z Sha, AM. Pedley, TD. Iles, S Zhang, JR. Staub, R Zhou#, SJ. Benkovic
+  title: Coordination of cell organelles to promote metabolon formation. 
+  year: [year].[priority: high to low]
+  publisher: Under review at PNAS
+
+- author: Q Zhang , H Hardtke , Y Zheng , MKV Ramani, E Escobar, J Brodbelt, R Zhou#
+  title: “Zipper” Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II
+  publisher: Submitted
+  year: 2025
+
+- author: J Fei, Y Zheng, C LaLonde, Y Tao, Ruobo Zhou#.
+  title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
+  publisher: Under review at Science Advances.
+  year: 2025
+
+- author: Yuan Tao, Ruobo Zhou.
+  title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
+  publisher: Submitted.
+  year: 2025
+
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A chemically inducible multimerization system for tunable and background-free RTK activation.
-  year: 2025.9
+  year: 2025
   link: https://www.biorxiv.org/content/10.1101/2025.09.06.674232v1
   publisher: bioRxiv
   type: 2
@@ -17,15 +37,15 @@
   
 - author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
   title: Actin Depolymerization Promotes Axonal Mitochondria Transport for Axon Regeneration and Neuroprotection.
-  year: 2025.7
+  year: 2025
   link: Not Available
   publisher: Under Revision at Science Translational Medicine.
   type: 2
   img: transparent_placeholder.png
 
-- author: H Zhang, Y Yao, X Wang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
+- author: H Zhang, Y Yao, X Wang, Y Zheng, SQ Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
-  year: 2025.7
+  year: 2025
   link: https://doi.org/10.1101/2025.07.19.665678
   publisher: bioRxiv
   type: 2
@@ -36,7 +56,7 @@
   publisher: bioRxiv
   type: 2
   page: 
-  year: 2025.5
+  year: 2025
   img: Paint.png
   link: https://www.biorxiv.org/content/10.1101/2025.05.09.653121v2
   
