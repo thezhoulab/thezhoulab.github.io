@@ -14,10 +14,13 @@
   name: Jinyu Fei
   description: Best Poster Award, 2023 Life Sciences Symposium
   img: Jinyu‘s Best Poster Award 2023.jpg
+- time: 2025/1
+  name: Shaoqing Zhang
+  description: Diagnose-a-thon Competition Award
 - time: 2025/5
   name: Yuan Tao
   description: Best Poster Award, 2025 Life Sciences Symposium
-  img: Yuan's best poster award.jpg
+  img: Yuan's Best Poster Award.jpg
 - time: 2025/5
   name: Yuanmin Zheng
   description: the Harry G. Miller Fellowship
@@ -35,5 +38,8 @@
   name: Yuanmin Zheng
   description: Certificate of recognition for the 2025 Cancer Research Day People's Choice Poster
   img: ym1.jpg
+- time: 2025/11
+  name: Yuanmin Zheng
+  description: Second-place winner in the Leonhard Center Art Engineering Competition
 
 

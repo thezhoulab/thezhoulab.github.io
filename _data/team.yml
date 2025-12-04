@@ -83,7 +83,6 @@ Graduate Student:
     
     
 
-
 Undergraduate Student:
   - name: Aditi Maheshwari
     education: Class of 2026, Penn State University
@@ -113,7 +112,9 @@ Undergraduate Student:
     interest: Virotherapy and oncology
     email: cgl5200@psu.edu
     img: Caden_LaLonde.jpg
-
+  - name: Joshua Lei 
+    interest: structural biology and cell signaling
+    img: Joshua_Lei.jpg
 
 
 Alumni:
@@ -130,7 +131,7 @@ Alumni:
     current: Graduate Student at Boston University
   - name: Mengde Liu  
     education: B.S. Biomedical Engineering, Penn State University
-#    interest: Machine learning, Super-resolution imaging methods
+    interest: Machine learning, Super-resolution imaging methods
     img: Mengde_Liu.jpeg
     current: Graduate Student at Duke University
   - name: Milap Atul Mistry
