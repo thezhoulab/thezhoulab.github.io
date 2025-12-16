@@ -37,7 +37,7 @@ Build highlight-author lists from `_data/team.yml`.
   {%- endif -%}
 {%- endfor -%}
 {% assign l_authors = l_authors_str | append: "R Zhou|" | split: "|" %}
-{% assign ug_authours = ug_authours_str | split: "|" %}
+{% assign ug_authours = ug_authours_str | append: "A Chakrabarti|" | split: "|" %}
 {% assign ug_authors = ug_authours %}
 
 {%- assign pubs = all_pubs | where: "type", "2" | sort: 'years' | reverse -%}
