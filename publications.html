@@ -5,16 +5,16 @@ layout: base
 
 {%- assign all_pubs = site.data.pubs | sort: 'year' -%}
 {%- assign pub_num = all_pubs.size -%}
-{% assign author_list = " R Zhou| H Li| B Ran| J Fei" | split:"|" %}
+{% assign author_list = " R Zhou| H Li| J Fei" | split:"|" %}
 
 {%- assign pubs = all_pubs | where: "type", "1" | sort: 'year' | reverse -%}
 <h2>Selected publications: </h2>
-{% include publications/pubs_new.html pubs=pubs author_list=author_list pub_num=pub_num %}
+{% include publications/pubs_left.html pubs=pubs author_list=author_list pub_num=pub_num %}
 
 {%- assign pubs = all_pubs | where: "type", "0" | sort: 'year' | reverse %}
 {%- assign pub_num = pubs.size -%}
 <h2>Other publications: </h2>
-{% include publications/pubs_new.html pubs=pubs author_list=author_list pub_num=pub_num %}
+{% include publications/pubs_left.html pubs=pubs author_list=author_list pub_num=pub_num %}
 
 <style type="text/css"></style>
 

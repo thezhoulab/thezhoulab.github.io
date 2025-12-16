@@ -304,6 +304,31 @@ body{
   min-width: 460px;
 }
 
+.pub_year{
+  text-align: center;
+  margin: 26px 0 10px;
+  font-size: 2em;
+  font-weight: 900;
+}
+.pub_year::before{
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  margin: 10px auto 18px;
+  background: currentColor;
+  opacity: 0;
+}
+.pub_year::after{
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  margin: 10px auto 18px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
 .pub_left_img{
   float: left;
   width: 120px;

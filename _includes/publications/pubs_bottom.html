@@ -1,56 +1,94 @@
-{% assign background=0 %}
-<div id="pubs">
-{%- for pub in pubs: -%}
-  <div class="pub" style="height: auto;">    
-    
-    <div class="pub_text" style="width: 1000px; margin:0;" >
-    
-       <p style="margin-top: 0;"><a href={{pub.link}}><span>{{pub_num}}. {{pub.title}}</span></a></p>
-      {% assign authors = pub.author | split: ", " %}
-      {% assign year = pub.year | split: "." %}
-      <p>
+{%- comment -%}
+_includes/publications/pubs_bottom.html
+Parameters (optional, with fallbacks for legacy pages):
+  include.pubs           — array of publication objects (falls back to page `pubs`)
+  include.pub_num        — starting index (falls back to page `pub_num`)
+  include.author_list    — authors to highlight (falls back to `include.l_authors` then page `l_authors`)
+  include.l_authors      — legacy alias for highlight authors
+  include.background     — optional, set to 1 to use background style
+{%- endcomment -%}
 
-      {% for author in authors %}
-        {% assign is_lab_author = false %}
-        {% for l_author in l_authors %}
-          {% if author contains l_author %}
-            {% assign is_lab_author = true %}
+{% assign background = include.background | default: 0 %}
+{% assign pubs_list = include.pubs | default: pubs %}
+{% assign current_num = include.pub_num | default: pub_num %}
+{% assign author_list = include.author_list %}
+{% if author_list == nil %}
+  {% assign author_list = include.l_authors %}
+{% endif %}
+{% if author_list == nil %}
+  {% assign author_list = l_authors %}
+{% endif %}
+{% if author_list == nil %}
+  {% assign author_list = "" | split: "|" %}
+{% endif %}
+
+<div id="pubs">
+{%- for pub in pubs_list -%}
+  <div class="pub" style="height: auto;">
+    <div class="pub_text" style="width: 1000px; margin:0;">
+      <p style="margin-top: 0;">
+        <a href="{{ pub.link }}">
+          <span>{{ current_num }}. {{ pub.title }}</span>
+        </a>
+      </p>
+
+      {% assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," %}
+      {% assign year_parts = pub.year | split: "." %}
+      <p>
+      {% for a in authors %}
+        {% assign name = a | strip | remove: "." | downcase %}
+        {% assign found = false %}
+        {% for special in author_list %}
+          {% assign special_clean = special | strip | remove: "." | downcase %}
+          {% if name == special_clean %}
+            {% assign found = true %}
             {% break %}
           {% endif %}
         {% endfor %}
-      
-        {% if is_lab_author == true %}
-          <b class="author">{{ author }}</b>
+
+        {% if found %}
+          <b class="author">{{ a | strip }}</b>
         {% else %}
-          <span>{{ author }}</span>
+          <span>{{ a | strip }}</span>
         {% endif %}
         {% unless forloop.last %}, {% endunless %}
       {% endfor %}
-      <span style="font-style: italic; font-weight: bold;"> {{pub.publisher}}</span><span> {{pub.page}}</span></span><span> ({{year[0]}})</span></p>
+      <span style="font-style: italic; font-weight: bold;"> {{ pub.publisher }}</span>
+      <span> {{ pub.page }}</span>
+      <span> ({{ year_parts[0] }})</span>
+      </p>
 
       {% if pub.highlight %}
-      <p style="font-size: 10px"><a href={{pub.highlight.link}}>Highlighted in <span style="font-style: italic; font-weight: bold;">{{pub.highlight.publisher}} </span>{{pub.highlight.page}} ({{pub.highlight.year}}): {{pub.highlight.title}} </a></p>
+      <p style="font-size: 10px">
+        <a href="{{ pub.highlight.link }}">
+          Highlighted in <span style="font-style: italic; font-weight: bold;">{{ pub.highlight.publisher }}</span>
+          {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+        </a>
+      </p>
       {% endif %}
 
       {% if pub.selected %}
-      <p style="font-size: 10px"><a href={{pub.selected.link}}>Selected as: <span style="font-style: italic; font-weight: bold;">{{pub.selected.description}} </a></span></p>
+      <p style="font-size: 10px">
+        <a href="{{ pub.selected.link }}">
+          Selected as: <span style="font-style: italic; font-weight: bold;">{{ pub.selected.description }}</span>
+        </a>
+      </p>
       {% endif %}
 
       {% if pub.img %}
         <div class="pub_img_bottom">
         {% if background == 1 %}
           <div class="pub_background">
-          <img src=assets/images/pubs/{{pub.img}}>
+            <img src="/assets/images/pubs/{{ pub.img }}" alt="" title="">
           </div>
-        {% else %}   
-          <img class="pub_img" src=assets/images/pubs/{{pub.img}}>
-          </div>
+        {% else %}
+          <img class="pub_img" src="/assets/images/pubs/{{ pub.img }}" alt="{{ pub.title | escape }}" title="{{ pub.title | escape }}">
         {% endif %}
+        </div>
       {% endif %}
     </div>
-
   </div>
-  {%- assign pub_num = pub_num | minus: 1 -%}
+  {% assign current_num = current_num | minus: 1 %}
 {%- endfor -%}
 </div>
 

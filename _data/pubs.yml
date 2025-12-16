@@ -7,25 +7,33 @@
 #   page:
 #   type:
 
-- author: Z Sha, AM. Pedley, TD. Iles, S Zhang, JR. Staub, R Zhou#, SJ. Benkovic
+- author: Z Sha, AM. Pedley, TD. Iles, S Zhang, JR. Staub, R Zhou, SJ. Benkovic#
   title: Coordination of cell organelles to promote metabolon formation. 
   year: 2025
+  type: 2
   publisher: Under review at PNAS
+  img: transparent_placeholder.png
 
-- author: Q Zhang , H Hardtke , Y Zheng , MKV Ramani, E Escobar, J Brodbelt, R Zhou#
+- author: Q Zhang, HA. Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, Y.J Zhang#
   title: “Zipper” Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II
-  publisher: Submitted
+  publisher: under review at Nature Communications.
+  type: 2
   year: 2025
+  img: transparent_placeholder.png
 
-- author: J Fei, Y Zheng, C LaLonde, Y Tao, Ruobo Zhou#.
+- author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
   title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
   publisher: Under review at Science Advances.
+  type: 2
   year: 2025
+  img: transparent_placeholder.png
 
-- author: Yuan Tao, Ruobo Zhou.
+- author: Y Tao, R Zhou#.
   title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
   publisher: Submitted.
+  type: 2
   year: 2025
+  img: transparent_placeholder.png
 
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A chemically inducible multimerization system for tunable and background-free RTK activation.
@@ -53,12 +61,12 @@
   
 - author: J Gao, H Li, S Tan, R Zhou, T.-H. Lee#.
   title: Roles of histone chaperone Nap1 and histone acetylation in regulating phase-separation of chromatin arrays.
-  publisher: bioRxiv
+  publisher: Nature Communications
   type: 2
   page: 
   year: 2025
   img: Paint.png
-  link: https://www.biorxiv.org/content/10.1101/2025.05.09.653121v2
+  link: https://www.nature.com/articles/s41467-025-65701-3
   
 - author: J Fei, R Zhou#. 
   title: Watching biomolecules stride in real time.
@@ -227,7 +235,7 @@
 
 
 # additional publications:
-- author: DN Lorenzo, A Badea, R Zhou et al.
+- author: DN Lorenzo, A Badea, R Zhou, et al.
   title: βII-spectrin promotes mouse brain connectivity through stabilizing axonal plasma membranes and enabling axonal organelle transport.
   year: 2019
   link: https://www.pnas.org/content/116/31/15686
@@ -275,7 +283,7 @@
   page: 42, 3821-3832
   type: 0
 
-- author: SR Wessel, AH Marceau, SC Massoni, R Zhou, T Ha, SJ Sandler and JL Keck.
+- author: SR Wessel, AH Marceau, SC Massoni, R Zhou, T Ha, SJ Sandler, JL Keck.
   title: PriC-mediated DNA replication restart requires PriC complex formation with the single-stranded DNA-binding protein.
   year: 2013
   link: https://www.sciencedirect.com/science/article/pii/S0021925820458971?via%3Dihub
@@ -283,7 +291,7 @@
   page: 288, 17569-17578
   type: 0
 
-- author: SH Yang, R Zhou, J Campbell, J Chen, T Ha, and TT Paull.
+- author: SH Yang, R Zhou, J Campbell, J Chen, T Ha, TT Paull.
   title: The SOSS1 single-stranded DNA binding complex promotes DNA end resection in concert with Exo1.
   year: 2013
   link: https://www.embopress.org/doi/full/10.1038/emboj.2012.314
@@ -291,7 +299,7 @@
   page: 32, 126-132
   type: 0
 
-- author: NF Lue, R Zhou, L Chico, N Mao, O Steinberg-Neifach and T Ha.
+- author: NF Lue, R Zhou, L Chico, N Mao, O Steinberg-Neifach, T Ha.
   title: The Telomere Capping Complex CST Has an Unusual Stoichiometry, Makes Multipartite Interaction with G-Tails, and Unfolds Higher-Order G-Tail Structures.
   year: 2013
   link: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003145
@@ -307,7 +315,7 @@
   page: 922, 85-100
   type: 0
 
-- author: MD Brenner, R Zhou, and T Ha.
+- author: MD Brenner, R Zhou, T Ha.
   title: "Forcing a connection: Impacts of single-molecule force spectroscopy on in vivo tension sensing."
   year: 2011
   link: https://onlinelibrary.wiley.com/doi/10.1002/bip.21587
@@ -315,7 +323,7 @@
   page: 95, 332-344
   type: 0
 
-- author: R Zhou, M Schlierf, and T Ha.
+- author: R Zhou, M Schlierf, T Ha.
   title: Fluorescence-force spectroscopy at the single molecule level.
   year: 2010
   link: https://www.sciencedirect.com/science/article/pii/S0076687910750163?via%3Dihub
