@@ -266,9 +266,23 @@ body{
   min-width: 600px;
 }
 
+/* Pub variants used by unified renderer (`_includes/publications/pubs_list.html`) */
+.pub--noimg{
+  height: 100px;
+  margin-bottom: -5px;
+}
+
+.pub--bottom{
+  height: auto;
+}
+
 .pub_left{
   float: left;
   width: 860px;
+}
+
+.pub_left--noimg{
+  width: 1000px;
 }
 .pub_right{
   float: left;
@@ -302,6 +316,39 @@ body{
   float: right;
   width: calc(var(--body-ratio) - 160px);
   min-width: 460px;
+}
+
+.pub_right_text--noimg{
+  float: left;
+  width: 1000px;
+}
+
+.pub_text{
+  width: 1000px;
+  margin: 0;
+}
+
+.pub__title{
+  margin-top: 0;
+}
+
+.pub__note{
+  font-size: 10px;
+}
+
+.pub__emph{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.pub__author--highlight{
+  color: var(--theme);
+  font-weight: bold;
+}
+
+.pub__author--ug{
+  color: var(--purple);
+  font-weight: bold;
 }
 
 .pub_year{

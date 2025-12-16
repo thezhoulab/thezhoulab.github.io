@@ -1,0 +1,325 @@
+{%- comment -%}
+_includes/publications/pubs_list.html
+
+Unified publications renderer.
+
+Parameters (all optional; sensible fallbacks for legacy pages):
+  include.pubs           — array of publication objects (falls back to page `pubs`, then `site.data.pubs`)
+  include.pub_num        — starting index (falls back to page `pub_num`, then `pubs_list.size`)
+  include.author_list    — authors to highlight (Array) (falls back to `include.l_authors` then page `l_authors`)
+  include.l_authors      — legacy alias for highlight authors (Array)
+  include.background     — optional, set to 1 to use background image style
+  include.layout         — "left" | "right" | "bottom" (default: "left")
+  include.group_by_year  — set to 1 to insert centered year headers (default: 0)
+  include.sort_by_year   — set to 1 to sort pubs by `year` descending (default: same as group_by_year)
+{%- endcomment -%}
+
+{% assign background = include.background | default: 0 %}
+{% assign layout = include.layout | default: "left" %}
+
+{% assign pubs_list = include.pubs | default: pubs | default: site.data.pubs %}
+{% assign current_num = include.pub_num | default: pub_num | default: pubs_list.size %}
+
+{% assign author_list = include.author_list %}
+{% if author_list == nil %}
+  {% assign author_list = include.l_authors %}
+{% endif %}
+{% if author_list == nil %}
+  {% assign author_list = l_authors %}
+{% endif %}
+{% if author_list == nil %}
+  {% assign author_list = "" | split: "|" %}
+{% endif %}
+
+{% comment %}
+Undergraduate highlight list (purple). Accept multiple variable names for convenience:
+- include.ug_author_list / include.ug_authors
+- page ug_authors / ug_authours
+{% endcomment %}
+{% assign ug_author_list = include.ug_author_list %}
+{% if ug_author_list == nil %}
+  {% assign ug_author_list = include.ug_authors %}
+{% endif %}
+{% if ug_author_list == nil %}
+  {% assign ug_author_list = ug_authors %}
+{% endif %}
+{% if ug_author_list == nil %}
+  {% assign ug_author_list = ug_authours %}
+{% endif %}
+{% if ug_author_list == nil %}
+  {% assign ug_author_list = "" | split: "|" %}
+{% endif %}
+
+{% assign group_flag = include.group_by_year | default: 0 %}
+{% assign sort_flag = include.sort_by_year | default: group_flag | default: 0 %}
+{% if sort_flag == 1 or sort_flag == "1" %}
+  {% assign list = pubs_list | sort: "year" | reverse %}
+{% else %}
+  {% assign list = pubs_list %}
+{% endif %}
+
+{% assign last_year = "" %}
+
+<div id="pubs">
+  {%- for pub in list -%}
+    {% assign pub_year_full = pub.year | default: "" | strip %}
+    {% assign pub_year = pub_year_full | split: "." | first %}
+
+    {% if (group_flag == 1 or group_flag == "1") and pub_year != "" and pub_year != last_year %}
+      <div class="pub_year">{{ pub_year }}</div>
+      {% assign last_year = pub_year %}
+    {% endif %}
+
+    {% assign link = pub.link | default: "" | strip %}
+    {% assign link_lc = link | downcase %}
+    {% assign has_link = true %}
+    {% if link == "" or link_lc == "not available" %}
+      {% assign has_link = false %}
+    {% endif %}
+
+    {% assign has_img = true %}
+    {% if pub.img == nil or pub.img == "" %}
+      {% assign has_img = false %}
+    {% endif %}
+
+    <div class="pub{% if layout == 'bottom' %} pub--bottom{% endif %}{% unless has_img %} pub--noimg{% endunless %}">
+
+      {% if layout == "left" %}
+        {% if has_img %}
+          {% if background == 1 %}
+            <div class="pub_background">
+              <img src="/assets/images/pubs/{{ pub.img }}" alt="" title="">
+            </div>
+          {% else %}
+            <div class="pub_left_img">
+              <img class="pub_img" src="/assets/images/pubs/{{ pub.img }}" alt="{{ pub.title | escape }}" title="{{ pub.title | escape }}">
+            </div>
+          {% endif %}
+        {% endif %}
+
+        <div class="pub_right_text{% unless has_img %} pub_right_text--noimg{% endunless %}">
+          <p class="pub__title">
+            {% if has_link %}<a href="{{ link }}">{% endif %}
+              <span>{{ current_num }}. {{ pub.title }}</span>
+            {% if has_link %}</a>{% endif %}
+          </p>
+          <p class="pub__meta">
+            {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
+            {%- for a in authors -%}
+              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+
+              {% assign found_ug = false %}
+              {% for special in ug_author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found_ug = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {% assign found = false %}
+              {% for special in author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              {% if found_ug %}
+                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+              {% elsif found %}
+                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+              {% else %}
+                {{ a | strip }}
+              {% endif %}
+              {% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+            <span class="pub__emph"> {{ pub.publisher }}</span>
+            <span> {{ pub.page }}</span>
+            <span> ({{ pub.year }})</span>
+          </p>
+
+          {%- if pub.highlight -%}
+          {% assign hlink = pub.highlight.link | default: "" | strip %}
+          {% assign hlink_lc = hlink | downcase %}
+          <p class="pub__note">
+            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
+              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
+              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+
+          {%- if pub.selected -%}
+          {% assign slink = pub.selected.link | default: "" | strip %}
+          {% assign slink_lc = slink | downcase %}
+          <p class="pub__note">
+            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
+              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
+            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+        </div>
+
+      {% elsif layout == "right" %}
+        <div class="pub_left{% unless has_img %} pub_left--noimg{% endunless %}">
+          <p class="pub__title">
+            {% if has_link %}<a href="{{ link }}">{% endif %}
+              <span>{{ current_num }}. {{ pub.title }}</span>
+            {% if has_link %}</a>{% endif %}
+          </p>
+          <p class="pub__meta">
+            {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
+            {%- for a in authors -%}
+              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+
+              {% assign found_ug = false %}
+              {% for special in ug_author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found_ug = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {% assign found = false %}
+              {% for special in author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {% if found_ug %}
+                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+              {% elsif found %}
+                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+              {% else %}
+                {{ a | strip }}
+              {% endif %}
+              {% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+            <span class="pub__emph"> {{ pub.publisher }}</span>
+            <span> {{ pub.page }}</span>
+            <span> ({{ pub.year }})</span>
+          </p>
+
+          {%- if pub.highlight -%}
+          {% assign hlink = pub.highlight.link | default: "" | strip %}
+          {% assign hlink_lc = hlink | downcase %}
+          <p class="pub__note">
+            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
+              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
+              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+
+          {%- if pub.selected -%}
+          {% assign slink = pub.selected.link | default: "" | strip %}
+          {% assign slink_lc = slink | downcase %}
+          <p class="pub__note">
+            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
+              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
+            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+        </div>
+
+        {% if has_img %}
+          {% if background == 1 %}
+            <div class="pub_background">
+              <img src="/assets/images/pubs/{{ pub.img }}" alt="" title="">
+            </div>
+          {% else %}
+            <div class="pub_right">
+              <img class="pub_img" src="/assets/images/pubs/{{ pub.img }}" alt="{{ pub.title | escape }}" title="{{ pub.title | escape }}">
+            </div>
+          {% endif %}
+        {% endif %}
+
+      {% else %}
+        <div class="pub_text">
+          <p class="pub__title">
+            {% if has_link %}<a href="{{ link }}">{% endif %}
+              <span>{{ current_num }}. {{ pub.title }}</span>
+            {% if has_link %}</a>{% endif %}
+          </p>
+          <p class="pub__meta">
+            {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
+            {%- for a in authors -%}
+              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+
+              {% assign found_ug = false %}
+              {% for special in ug_author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found_ug = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {% assign found = false %}
+              {% for special in author_list %}
+                {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+                {% if name == special_clean %}
+                  {% assign found = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              {% if found_ug %}
+                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+              {% elsif found %}
+                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+              {% else %}
+                {{ a | strip }}
+              {% endif %}
+              {% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+            <span class="pub__emph"> {{ pub.publisher }}</span>
+            <span> {{ pub.page }}</span>
+            <span> ({{ pub_year }})</span>
+          </p>
+
+          {%- if pub.highlight -%}
+          {% assign hlink = pub.highlight.link | default: "" | strip %}
+          {% assign hlink_lc = hlink | downcase %}
+          <p class="pub__note">
+            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
+              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
+              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+
+          {%- if pub.selected -%}
+          {% assign slink = pub.selected.link | default: "" | strip %}
+          {% assign slink_lc = slink | downcase %}
+          <p class="pub__note">
+            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
+              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
+            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
+          </p>
+          {%- endif -%}
+
+          {% if has_img %}
+            <div class="pub_img_bottom">
+              {% if background == 1 %}
+                <div class="pub_background">
+                  <img src="/assets/images/pubs/{{ pub.img }}" alt="" title="">
+                </div>
+              {% else %}
+                <img class="pub_img" src="/assets/images/pubs/{{ pub.img }}" alt="{{ pub.title | escape }}" title="{{ pub.title | escape }}">
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+    {% assign current_num = current_num | minus: 1 %}
+  {%- endfor -%}
+</div>
+
+

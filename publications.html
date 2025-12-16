@@ -9,12 +9,12 @@ layout: base
 
 {%- assign pubs = all_pubs | where: "type", "1" | sort: 'year' | reverse -%}
 <h2>Selected publications: </h2>
-{% include publications/pubs_left.html pubs=pubs author_list=author_list pub_num=pub_num %}
+{% include publications/pubs_list.html pubs=pubs author_list=author_list pub_num=pub_num layout="left" group_by_year="1" sort_by_year="1" %}
 
 {%- assign pubs = all_pubs | where: "type", "0" | sort: 'year' | reverse %}
 {%- assign pub_num = pubs.size -%}
 <h2>Other publications: </h2>
-{% include publications/pubs_left.html pubs=pubs author_list=author_list pub_num=pub_num %}
+{% include publications/pubs_list.html pubs=pubs author_list=author_list pub_num=pub_num layout="left" group_by_year="1" sort_by_year="1" %}
 
 <style type="text/css"></style>
 

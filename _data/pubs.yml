@@ -51,7 +51,7 @@
   type: 2
   img: transparent_placeholder.png
 
-- author: H Zhang, Y Yao, X Wang, Y Zheng, SQ Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
+- author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025
   link: https://doi.org/10.1101/2025.07.19.665678
@@ -73,13 +73,13 @@
   publisher: Science 
   type: 2
   page: 379, 986-987
-  year: 2023.3
+  year: 2023
   img: wbsi.svg
   link: https://www.science.org/doi/10.1126/science.adg8451
   
 - author: R Zhou#, B Han, R Nowak, Y Lu, E Heller, C Xia, AH Chishti, VM Fowler, X Zhuang#.
   title: Proteomic and functional analyses of the periodic membrane skeleton in neurons.
-  year: 2022.6
+  year: 2022
   img: rxiv.webp
   page: 13, 3196
   publisher: Nature Communications
@@ -88,7 +88,7 @@
 
 - author: R Zhou, B Han, C Xia, X Zhuang.
   title: Membrane-associated periodic skeleton is a signaling platform for RTK transactivation in neurons.
-  year: 2019.2
+  year: 2019
   type: 1
   link: https://www.science.org/doi/10.1126/science.aaw5937
   publisher: Science
@@ -103,7 +103,7 @@
     
 - author: R Zhou# (co-corresponding author), O Yang, AC Déclais et al.
   title: Junction resolving enzymes use multivalency to keep the Holliday junction dynamic.
-  year: 2019.1
+  year: 2019
   type: 1
   link: https://www.nature.com/articles/s41589-018-0209-y
   publisher: Nature Chemical Biology

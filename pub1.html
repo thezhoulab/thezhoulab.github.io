@@ -6,21 +6,51 @@ title: Publications
 
 
 <p class="hl"> #：corresponding author. </p>
+<p class="pub__author pub__author--ug"> Undergraduate students (hightlighted in purple) </p>
 {%- assign all_pubs = site.data.pubs | sort: 'year' -%}
 {%- assign pub_num = all_pubs.size -%}
-{% assign l_authors = "R Zhou|J Fei|H Li|H Zhang|G Xu|Y Tao|H Yang|S Zhang|R Xu|Y Zheng" | split:"|" %}
+{%- comment -%}
+Build highlight-author lists from `_data/team.yml`.
+- `l_authors`: non-undergraduate team members (format: "F Last")
+- `ug_authours`: undergraduate students only (same format)
+{%- endcomment -%}
+{% assign l_authors_str = "" %}
+{% assign ug_authours_str = "" %}
+{%- for role in site.data.team -%}
+  {% assign role_name = role[0] %}
+  {% assign people = role[1] %}
+  {%- if people -%}
+    {%- for person in people -%}
+      {%- if person.name -%}
+        {% assign parts = person.name | split: " " %}
+        {% assign first = parts | first %}
+        {% assign last = parts | last %}
+        {% assign initial = first | slice: 0, 1 %}
+        {% assign author = initial | append: " " | append: last %}
+        {%- if role_name == "Undergraduate Student" -%}
+          {% assign ug_authours_str = ug_authours_str | append: author | append: "|" %}
+        {%- else -%}
+          {% assign l_authors_str = l_authors_str | append: author | append: "|" %}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+{% assign l_authors = l_authors_str | append: "R Zhou|" | split: "|" %}
+{% assign ug_authours = ug_authours_str | split: "|" %}
+{% assign ug_authors = ug_authours %}
 
 {%- assign pubs = all_pubs | where: "type", "2" | sort: 'years' | reverse -%}
 <h1>Independent Career: </h1> 
-{% include publications/pubs_left.html l_authors=l_authors %}
+{% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="1" sort_by_year="1" %}
 
 
 <h1 style="margin-top: 50px">Prior to Penn State:</h1>
 {%- assign pubs = all_pubs | where: "type", "1" | sort: 'years' | reverse -%}
 <h2>Selected publications: </h2>
-{% include publications/pubs_left.html %}
+{% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="1" sort_by_year="1" %}
 
 {%- assign pubs = all_pubs | where: "type", "0" | sort: 'year' | reverse %}
 {%- assign pub_num = pubs.size -%}
 <h2>Other publications: </h2>
-{% include publications/pubs_bottom.html l_authors=l_authors %}
+{% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="bottom" %}

@@ -11,7 +11,4 @@ permalink: /patents
 {%- assign patent_num = patents.size -%}
 {% assign author_list = "R Zhou|H Zhang" | split:"|" %}
 
-{% include publications/patents.html 
-     patents=patents 
-     author_list=author_list 
-     patent_num=patent_num %}
+{% include publications/patents.html patents=patents author_list=author_list patent_num=patent_num %}
