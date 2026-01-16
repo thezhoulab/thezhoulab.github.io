@@ -23,7 +23,7 @@
   img: transparent_placeholder.png
 
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
-  title: "Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II
+  title: '"Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II'
   publisher: bioRxiv, in revision at Nature Communications
   link: https://www.biorxiv.org/content/10.64898/2026.01.02.697396v1
   type: 2
@@ -37,15 +37,13 @@
   type: 2
   year: 2025
   img: transparent_placeholder.png
-
 - author: Y Tao, R Zhou#.
-  title: CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy.
+  title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
   publisher: bioRxiv
   link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
   img: transparent_placeholder.png
-
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A chemically inducible multimerization system for tunable and background-free RTK activation.
   year: 2025
@@ -53,14 +51,12 @@
   publisher: bioRxiv
   type: 2
   img: transparent_placeholder.png
-  
 - author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
   title: Actin depolymerization promotes axon regeneration by restoring axonal mitochondria transport in mouse models of optic neuropathy.
   year: 2026
   publisher: Accepted at Science Translational Medicine
   type: 2
   img: transparent_placeholder.png
-
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025
@@ -68,7 +64,6 @@
   publisher: bioRxiv, Accepted at Nature Communications
   type: 2
   img: 2025_han.jpg
-  
 - author: J Gao, H Li, S Tan, R Zhou, TH Lee#.
   title: Roles of histone chaperone Nap1 and histone acetylation in regulating phase-separation of chromatin arrays.
   page: 16, 10672
@@ -77,7 +72,6 @@
   year: 2025
   img: Paint.png
   link: https://www.nature.com/articles/s41467-025-65701-3
-  
 - author: J Fei, R Zhou#. 
   title: Watching biomolecules stride in real time.
   publisher: Science 
@@ -86,7 +80,6 @@
   year: 2023
   img: wbsi.svg
   link: https://www.science.org/doi/10.1126/science.adg8451
-  
 - author: R Zhou#, B Han, R Nowak, Y Lu, E Heller, C Xia, AH Chishti, VM Fowler, X Zhuang#.
   title: Proteomic and functional analyses of the periodic membrane skeleton in neurons.
   year: 2022
@@ -95,7 +88,6 @@
   publisher: Nature Communications
   link: https://www.nature.com/articles/s41467-022-30720-x
   type: 2
-
 - author: R Zhou, B Han, C Xia, X Zhuang.
   title: Membrane-associated periodic skeleton is a signaling platform for RTK transactivation in neurons.
   year: 2019
