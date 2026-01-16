@@ -7,30 +7,41 @@
 #   page:
 #   type:
 
+- author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
+  title: A Chemically Inducible Multimerization System for Tunable and Background-Free RTK Activation
+  year: 2026
+  type: 2
+  publisher: Analytical Chemistry
+  link: https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c05190
+  img: transparent_placeholder.png
+
 - author: Z Sha, AM Pedley, TD Iles, S Zhang, JR Staub, R Zhou, SJ Benkovic#
   title: Coordination of cell organelles to promote metabolon formation. 
-  year: 2025
+  year: 2026
   type: 2
-  publisher: Under review at PNAS
+  publisher: Accepted at PNAS
   img: transparent_placeholder.png
 
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
-  title: “Zipper” Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II
-  publisher: under review at Nature Communications.
+  title: "Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II
+  publisher: bioRxiv, in revision at Nature Communications
+  link: https://www.biorxiv.org/content/10.64898/2026.01.02.697396v1
   type: 2
-  year: 2025
+  year: 2026
   img: transparent_placeholder.png
 
 - author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
   title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
-  publisher: bioRxiv
+  publisher: bioRxiv (Accepted at Science Advances)
+  link: https://www.biorxiv.org/content/10.64898/2025.12.12.693977v2
   type: 2
   year: 2025
   img: transparent_placeholder.png
 
 - author: Y Tao, R Zhou#.
-  title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
-  publisher: Submitted.
+  title: CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy.
+  publisher: bioRxiv
+  link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
   img: transparent_placeholder.png
@@ -44,10 +55,9 @@
   img: transparent_placeholder.png
   
 - author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
-  title: Actin Depolymerization Promotes Axonal Mitochondria Transport for Axon Regeneration and Neuroprotection.
-  year: 2025
-  link: Not Available
-  publisher: Under Revision at Science Translational Medicine.
+  title: Actin depolymerization promotes axon regeneration by restoring axonal mitochondria transport in mouse models of optic neuropathy.
+  year: 2026
+  publisher: Accepted at Science Translational Medicine
   type: 2
   img: transparent_placeholder.png
 
@@ -55,16 +65,15 @@
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025
   link: https://doi.org/10.1101/2025.07.19.665678
-  publisher: bioRxiv
+  publisher: bioRxiv, Accepted at Nature Communications
   type: 2
   img: 2025_han.jpg
   
 - author: J Gao, H Li, S Tan, R Zhou, TH Lee#.
   title: Roles of histone chaperone Nap1 and histone acetylation in regulating phase-separation of chromatin arrays.
-  page: 16,10672
+  page: 16, 10672
   publisher: Nature Communications
   type: 2
-  page: 
   year: 2025
   img: Paint.png
   link: https://www.nature.com/articles/s41467-025-65701-3
