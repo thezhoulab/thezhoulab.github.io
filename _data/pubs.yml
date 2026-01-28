@@ -19,7 +19,9 @@
   title: Coordination of cell organelles to promote metabolon formation. 
   year: 2026
   type: 2
-  publisher: Accepted at PNAS
+  publisher: Proc. Natl. Acad. Sci.
+  link: https://www.pnas.org/doi/10.1073/pnas.2532504123
+  page: 123 (5) e2532504123
   img: transparent_placeholder.png
 
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
@@ -39,7 +41,7 @@
   img: transparent_placeholder.png
 - author: Y Tao, R Zhou#.
   title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
-  publisher: bioRxiv
+  publisher: bioRxiv, under revision
   link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
@@ -289,7 +291,7 @@
   title: PriC-mediated DNA replication restart requires PriC complex formation with the single-stranded DNA-binding protein.
   year: 2013
   link: https://www.sciencedirect.com/science/article/pii/S0021925820458971?via%3Dihub
-  publisher: publisher of Biological Chemistry
+  publisher: Journal of Biological Chemistry
   page: 288, 17569-17578
   type: 0
 

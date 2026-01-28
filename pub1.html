@@ -18,6 +18,7 @@ Build highlight-author lists from `_data/team.yml`.
 {% assign ug_authours_str = "" %}
 {%- for role in site.data.team -%}
   {% assign role_name = role[0] %}
+  {% assign role_name_lc = role_name | downcase %}
   {% assign people = role[1] %}
   {%- if people -%}
     {%- for person in people -%}
@@ -27,7 +28,7 @@ Build highlight-author lists from `_data/team.yml`.
         {% assign last = parts | last %}
         {% assign initial = first | slice: 0, 1 %}
         {% assign author = initial | append: " " | append: last %}
-        {%- if role_name == "Undergraduate Student" -%}
+        {%- if role_name_lc contains "undergraduate" -%}
           {% assign ug_authours_str = ug_authours_str | append: author | append: "|" %}
         {%- else -%}
           {% assign l_authors_str = l_authors_str | append: author | append: "|" %}
@@ -45,10 +46,10 @@ Build highlight-author lists from `_data/team.yml`.
 {% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="1" sort_by_year="1" %}
 
 
-<h1 style="margin-top: 50px">Prior to Penn State:</h1>
+<h1 class="pub_section_title pub_section_title--spaced">Prior to Penn State:</h1>
 {%- assign pubs = all_pubs | where: "type", "1" | sort: 'years' | reverse -%}
 <h2>Selected publications: </h2>
-{% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="1" sort_by_year="1" %}
+{% include publications/pubs_list.html pubs=pubs pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="0" sort_by_year="1" %}
 
 {%- assign pubs = all_pubs | where: "type", "0" | sort: 'year' | reverse %}
 {%- assign pub_num = pubs.size -%}

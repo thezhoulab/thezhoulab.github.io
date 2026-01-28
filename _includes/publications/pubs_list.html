@@ -59,13 +59,23 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
 {% endif %}
 
 {% assign last_year = "" %}
+{% assign year_header_from = include.year_header_from | default: "" %}
 
 <div id="pubs">
   {%- for pub in list -%}
     {% assign pub_year_full = pub.year | default: "" | strip %}
     {% assign pub_year = pub_year_full | split: "." | first %}
 
-    {% if (group_flag == 1 or group_flag == "1") and pub_year != "" and pub_year != last_year %}
+    {% assign show_year_header = true %}
+    {% if year_header_from != "" %}
+      {% if pub_year == "" %}
+        {% assign show_year_header = false %}
+      {% elsif pub_year | plus: 0 < year_header_from | plus: 0 %}
+        {% assign show_year_header = false %}
+      {% endif %}
+    {% endif %}
+
+    {% if (group_flag == 1 or group_flag == "1") and show_year_header and pub_year != "" and pub_year != last_year %}
       <div class="pub_year">{{ pub_year }}</div>
       {% assign last_year = pub_year %}
     {% endif %}
