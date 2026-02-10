@@ -1,35 +1,29 @@
 <!-- _includes/publications/patents.html -->
 <div id="patents">
+  {% assign patent_num = include.patent_num %}
   {%- for patent in include.patents -%}
-    <div class="patent">
-      <p>
-        <a href="{{ patent.link }}">
-          <span>{{ include.patent_num }}. {{ patent.title }}</span>
-        </a>
+    <div class="patent pub">
+      <p class="pub__title">
+        <a href="{{ patent.link }}">{{ patent_num }}. {{ patent.title }}</a>
       </p>
-      <p>
-        {% assign authors = patent.author | split: "," %}
-        {% for a in authors %}
+      <p class="pub__meta">
+        {%- assign authors = patent.author | split: "," -%}
+        {%- for a in authors -%}
           {% assign name = a | strip | remove: "." | downcase %}
           {% assign found = false %}
           {% for special in include.author_list %}
             {% assign special_clean = special | remove: "." | downcase %}
             {% if name == special_clean %}{% assign found = true %}{% endif %}
           {% endfor %}
-          {% if found %}
-            <span style="color:#74b9ff; font-weight:bold">{{ a | strip }}</span>
-          {% else %}
-            {{ a | strip }}
-          {% endif %}
-          {% unless forloop.last %}, {% endunless %}
-        {% endfor %}
+          {% if found %}<span class="pub__author--highlight">{{ a | strip }}</span>{% else %}{{ a | strip }}{% endif %}{% unless forloop.last %}, {% endunless %}
+        {%- endfor -%}
         <span> ({{ patent.year }})</span>
       </p>
-      <p>
-        <span style="font-style:italic; font-weight:bold;">{{ patent.publisher }}</span>
+      <p class="pub__meta">
+        <span class="pub__emph">{{ patent.publisher }}</span>
         <span> {{ patent.page }}</span>
       </p>
     </div>
-    {% assign include.patent_num = include.patent_num | minus: 1 %}
+    {% assign patent_num = patent_num | minus: 1 %}
   {%- endfor -%}
 </div>
