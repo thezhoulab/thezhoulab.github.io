@@ -2,37 +2,44 @@
 # Format:
 # - author:
 #   title:
-#   year: [year].[priority: high to low]
+#   year: [year]
+#   sort_order: [YYYYPP] where PP is priority (99=highlighted first, then 12-01 by month descending)
 #   publisher:
 #   page:
 #   type:
+#   highlight:
+#     items:  # for multiple highlights with individual links
+#       - text: "media name"
+#         link: "url"
 
 - author: S Zhang, J Fei, Y Zheng, R Zhou#.
   title: Tunable Chemical and Optical Control of ER-Plasma Membrane Contact Site Geometry and Dynamics with High-Fidelity Visualization
   year: 2026
+  sort_order: 202601
   type: 2
   publisher: bioRxiv
   link: https://www.biorxiv.org/content/10.64898/2026.01.28.701813v1.full
   img: transparent_placeholder.png
 
-
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A Chemically Inducible Multimerization System for Tunable and Background-Free RTK Activation
   year: 2026
+  sort_order: 202601
   type: 2
   publisher: Analytical Chemistry
   page: 98 (2), 1328-1341
   link: https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c05190
-  img: transparent_placeholder.png
+  img: yuanmin_analytical_chemistry_26.jpeg
 
 - author: Z Sha, AM Pedley, TD Iles, S Zhang, JR Staub, R Zhou, SJ Benkovic#
   title: Coordination of cell organelles to promote metabolon formation. 
   year: 2026
+  sort_order: 202602
   type: 2
   publisher: Proc. Natl. Acad. Sci.
   link: https://www.pnas.org/doi/10.1073/pnas.2532504123
   page: 123 (5) e2532504123
-  img: transparent_placeholder.png
+  img: pnas_26.png
 
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
   title: '"Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II'
@@ -40,14 +47,35 @@
   link: https://www.biorxiv.org/content/10.64898/2026.01.02.697396v1
   type: 2
   year: 2026
+  sort_order: 202601
   img: transparent_placeholder.png
 
 - author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
   title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
-  publisher: bioRxiv (Accepted at Science Advances)
+  publisher: Science Advances
+  page: 12, eaeb0803
+  link: https://www.science.org/doi/full/10.1126/sciadv.aeb0803
+  type: 2
+  year: 2026
+  sort_order: 202699
+  img: jinyu_fei_scienceadvances_26.png
+  highlight:
+    cover_img: sciadv.2026.12.cover.jpg
+    items:
+      - text: Penn State News
+        link: https://www.psu.edu/news/research/story/skeleton-gatekeeper-lining-brain-cells-could-guard-against-alzheimers
+      - text: EurekAlert
+        link: https://www.eurekalert.org/multimedia/1114795
+      - text: Medical Xpress
+        link: https://medicalxpress.com/news/2026-02-hidden-neuron-gatekeeper-alzheimer-buildup.html
+
+- author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
+  title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
+  publisher: bioRxiv
   link: https://www.biorxiv.org/content/10.64898/2025.12.12.693977v2
   type: 2
   year: 2025
+  sort_order: 202512
   img: transparent_placeholder.png
 - author: Y Tao, R Zhou#.
   title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
@@ -55,23 +83,27 @@
   link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
+  sort_order: 202512
   img: transparent_placeholder.png
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A chemically inducible multimerization system for tunable and background-free RTK activation.
   year: 2025
+  sort_order: 202509
   link: https://www.biorxiv.org/content/10.1101/2025.09.06.674232v1
   publisher: bioRxiv
   type: 2
-  img: transparent_placeholder.png
+  img: yuanmin_analytical_chemistry_26.jpeg
 - author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
   title: Actin depolymerization promotes axon regeneration by restoring axonal mitochondria transport in mouse models of optic neuropathy.
   year: 2026
+  sort_order: 202602
   publisher: Accepted at Science Translational Medicine
   type: 2
   img: transparent_placeholder.png
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025
+  sort_order: 202507
   link: https://doi.org/10.1101/2025.07.19.665678
   publisher: bioRxiv, Accepted at Nature Communications
   type: 2
@@ -82,6 +114,7 @@
   publisher: Nature Communications
   type: 2
   year: 2025
+  sort_order: 202511
   img: Paint.png
   link: https://www.nature.com/articles/s41467-025-65701-3
 - author: J Fei, R Zhou#. 
@@ -90,11 +123,13 @@
   type: 2
   page: 379, 986-987
   year: 2023
+  sort_order: 202303
   img: wbsi.svg
   link: https://www.science.org/doi/10.1126/science.adg8451
 - author: R Zhou#, B Han, R Nowak, Y Lu, E Heller, C Xia, AH Chishti, VM Fowler, X Zhuang#.
   title: Proteomic and functional analyses of the periodic membrane skeleton in neurons.
   year: 2022
+  sort_order: 202206
   img: rxiv.webp
   page: 13, 3196
   publisher: Nature Communications
@@ -103,6 +138,7 @@
 - author: R Zhou, B Han, C Xia, X Zhuang.
   title: Membrane-associated periodic skeleton is a signaling platform for RTK transactivation in neurons.
   year: 2019
+  sort_order: 201999
   type: 1
   link: https://www.science.org/doi/10.1126/science.aaw5937
   publisher: Science
@@ -118,6 +154,7 @@
 - author: R Zhou# (co-corresponding author), O Yang, AC Déclais et al.
   title: Junction resolving enzymes use multivalency to keep the Holliday junction dynamic.
   year: 2019
+  sort_order: 201998
   type: 1
   link: https://www.nature.com/articles/s41589-018-0209-y
   publisher: Nature Chemical Biology
@@ -133,6 +170,7 @@
 - author: Y Sigal, R Zhou, X Zhuang.
   title: Visualizing and discovering cellular structures with super-resolution microscopy.
   year: 2018
+  sort_order: 201809
   type: 1
   link: https://www.science.org/doi/10.1126/science.aau1044
   img: srm.jpeg
@@ -142,6 +180,7 @@
 - author: B Han, R Zhou# (co-first author / co-corresponding author), C Xia, X Zhuang#.
   title: Structural organization of the actin-spectrin–based membrane skeleton in dendrites and soma of neurons
   year: 2017
+  sort_order: 201708
   type: 1
   link: https://www.pnas.org/content/114/32/E6678
   img: structure.png
@@ -151,6 +190,7 @@
 - author: C Wang, B Han, R Zhou, X Zhuang.
   title: Real-time imaging of translation on single mRNA transcripts in live cells.
   year: 2016
+  sort_order: 201605
   type: 1
   link: https://www.sciencedirect.com/science/article/pii/S0092867416304834
   img: rtimage.jpg
@@ -160,6 +200,7 @@
 - author: J He, R Zhou (co-first author), Z Wu et al.
   title: Prevalent presence of periodic actin-spectrin-based membrane skeleton in a broad range of neuronal cell types and animal species.
   year: 2016
+  sort_order: 201605
   link: https://www.pnas.org/content/113/21/6029.long
   img: prevalent.png
   publisher: PNAS
@@ -169,6 +210,7 @@
 - author: R Zhou, AG Kozlov, R Roy, J Zhang, S Korolev, TM Lohman and T Ha.
   title: SSB functions as a sliding platform that migrates on DNA via reptation.
   year: 2011
+  sort_order: 201107
   publisher: Cell
   page: 146, 222-232
   type: 1
@@ -181,6 +223,7 @@
 - author: TTM Ngo, Q Zhang, R Zhou, JG Yodh and T Ha.
   title: Asymmetric unwrapping of nucleosomes under tension directed by DNA local flexibility.
   year: 2015
+  sort_order: 201599
   publisher: Cell
   page: 160, 1135-1144
   type: 1
@@ -196,6 +239,7 @@
 - author: R Zhou, J Zhang, ML Bochman, VA Zakian and T Ha.
   title: Periodic DNA patrolling underlies diverse functions of Pif1 on R-loops and G-rich DNA.
   year: 2014
+  sort_order: 201499
   publisher: eLife
   page: 3, e02190
   type: 1
@@ -211,6 +255,7 @@
 - author: R Zhou, S Kunzelmann, M Webb, T Ha.
   title: Detecting intramolecular conformational dynamics of single molecules in short distance range with sub-nanometer sensitivity.
   year: 2011
+  sort_order: 201111
   publisher: Nano Letters
   link: https://pubs.acs.org/doi/abs/10.1021/nl2032876
   img: detect.png
@@ -220,6 +265,7 @@
 - author: C Grashoff , BD Hoffman, MD Brenner, R Zhou, M Parsons, MT Yang, M A. McLean, SG Sligar, CS Chen, T Ha and MA Schwartz.
   title: Measuring mechanical tension across vinculin reveals regulation of focal adhesion dynamics.
   year: 2010
+  sort_order: 201099
   publisher: Nature
   page: 466, 263–266
   link: https://www.nature.com/articles/nature09198
@@ -235,6 +281,7 @@
 - author: S Hohng, R Zhou, MK Nahas, J Yu, K Schulten, DMJ Lilley and T Ha.
   title: Fluorescence-force spectroscopy maps two-dimensional reaction landscape of the Holliday junction.
   year: 2007
+  sort_order: 200799
   publisher: Science
   page: 318, 279-283
   link: https://www.science.org/doi/10.1126/science.1146113

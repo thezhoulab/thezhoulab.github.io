@@ -1,0 +1,45 @@
+{%- comment -%}
+_includes/publications/highlight_section.html
+
+Renders highlight and selected sections for a publication.
+Parameters:
+  include.pub — the publication object
+{%- endcomment -%}
+
+{%- assign pub = include.pub -%}
+
+{%- if pub.highlight -%}
+<p class="pub__note">
+  {%- if pub.highlight.items -%}
+    {%- comment -%}New format: multiple highlight items with individual links{%- endcomment -%}
+    Highlighted in
+    {%- for item in pub.highlight.items -%}
+      {% assign ilink = item.link | default: "" | strip %}
+      {% if ilink != "" %}<a href="{{ ilink }}">{% endif %}<span class="pub__emph">{{ item.text }}</span>{% if ilink != "" %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+  {%- else -%}
+    {%- comment -%}Legacy format: single highlight with full link{%- endcomment -%}
+    {% assign hlink = pub.highlight.link | default: "" | strip %}
+    {% assign hlink_lc = hlink | downcase %}
+    {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
+      Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
+      {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
+    {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
+  {%- endif -%}
+</p>
+{%- if pub.highlight.cover_img -%}
+<div class="pub__highlight-cover">
+  <img src="/assets/images/pubs/{{ pub.highlight.cover_img }}" alt="Journal cover" class="pub__highlight-cover-img">
+</div>
+{%- endif -%}
+{%- endif -%}
+
+{%- if pub.selected -%}
+{% assign slink = pub.selected.link | default: "" | strip %}
+{% assign slink_lc = slink | downcase %}
+<p class="pub__note">
+  {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
+    Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
+  {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
+</p>
+{%- endif -%}

@@ -53,7 +53,8 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
 {% assign group_flag = include.group_by_year | default: 0 %}
 {% assign sort_flag = include.sort_by_year | default: group_flag | default: 0 %}
 {% if sort_flag == 1 or sort_flag == "1" %}
-  {% assign list = pubs_list | sort: "year" | reverse %}
+  {%- comment -%}Sort by sort_order (YYYYPP) if available, then by year. Higher values first.{%- endcomment -%}
+  {% assign list = pubs_list | sort: "sort_order" | reverse %}
 {% else %}
   {% assign list = pubs_list %}
 {% endif %}
@@ -92,7 +93,11 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
       {% assign has_img = false %}
     {% endif %}
 
-    <div class="pub{% if layout == 'bottom' %} pub--bottom{% endif %}{% unless has_img %} pub--noimg{% endunless %}">
+    {% assign has_highlight_cover = false %}
+    {% if pub.highlight and pub.highlight.cover_img %}
+      {% assign has_highlight_cover = true %}
+    {% endif %}
+    <div class="pub{% if layout == 'bottom' %} pub--bottom{% endif %}{% unless has_img %} pub--noimg{% endunless %}{% if has_highlight_cover %} pub--has-highlight-cover{% endif %}">
 
       {% if layout == "left" %}
         {% if has_img %}
@@ -149,26 +154,7 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
             <span> ({{ pub.year }})</span>
           </p>
 
-          {%- if pub.highlight -%}
-          {% assign hlink = pub.highlight.link | default: "" | strip %}
-          {% assign hlink_lc = hlink | downcase %}
-          <p class="pub__note">
-            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
-              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
-              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
-            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
-
-          {%- if pub.selected -%}
-          {% assign slink = pub.selected.link | default: "" | strip %}
-          {% assign slink_lc = slink | downcase %}
-          <p class="pub__note">
-            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
-              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
-            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
+          {% include publications/highlight_section.html pub=pub %}
         </div>
 
       {% elsif layout == "right" %}
@@ -215,26 +201,7 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
             <span> ({{ pub.year }})</span>
           </p>
 
-          {%- if pub.highlight -%}
-          {% assign hlink = pub.highlight.link | default: "" | strip %}
-          {% assign hlink_lc = hlink | downcase %}
-          <p class="pub__note">
-            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
-              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
-              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
-            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
-
-          {%- if pub.selected -%}
-          {% assign slink = pub.selected.link | default: "" | strip %}
-          {% assign slink_lc = slink | downcase %}
-          <p class="pub__note">
-            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
-              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
-            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
+          {% include publications/highlight_section.html pub=pub %}
         </div>
 
         {% if has_img %}
@@ -292,26 +259,7 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
             <span> ({{ pub_year }})</span>
           </p>
 
-          {%- if pub.highlight -%}
-          {% assign hlink = pub.highlight.link | default: "" | strip %}
-          {% assign hlink_lc = hlink | downcase %}
-          <p class="pub__note">
-            {% if hlink != "" and hlink_lc != "not available" %}<a href="{{ hlink }}">{% endif %}
-              Highlighted in <span class="pub__emph">{{ pub.highlight.publisher }}</span>
-              {{ pub.highlight.page }} ({{ pub.highlight.year }}): {{ pub.highlight.title }}
-            {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
-
-          {%- if pub.selected -%}
-          {% assign slink = pub.selected.link | default: "" | strip %}
-          {% assign slink_lc = slink | downcase %}
-          <p class="pub__note">
-            {% if slink != "" and slink_lc != "not available" %}<a href="{{ slink }}">{% endif %}
-              Selected as: <span class="pub__emph">{{ pub.selected.description }}</span>
-            {% if slink != "" and slink_lc != "not available" %}</a>{% endif %}
-          </p>
-          {%- endif -%}
+          {% include publications/highlight_section.html pub=pub %}
 
           {% if has_img %}
             <div class="pub_img_bottom">

@@ -276,6 +276,20 @@ body{
   height: auto;
 }
 
+/* Publication with centered highlight cover image: allow full height and clear so next pub layout is correct */
+.pub--has-highlight-cover{
+  height: auto;
+  display: block;
+  clear: both;
+  overflow: visible;
+}
+
+.pub--has-highlight-cover::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .pub_left{
   float: left;
   width: 860px;
@@ -333,7 +347,22 @@ body{
 }
 
 .pub__note{
-  font-size: 10px;
+  font-size: inherit;
+}
+
+.pub__highlight-cover{
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  clear: both;
+}
+
+.pub__highlight-cover-img{
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .pub__emph{
