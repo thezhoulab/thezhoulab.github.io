@@ -17,7 +17,7 @@
   year: 2026
   sort_order: 202601
   type: 2
-  publisher: bioRxiv
+  publisher: bioRxiv, under review at JACS Au
   link: https://www.biorxiv.org/content/10.64898/2026.01.28.701813v1.full
   img: transparent_placeholder.png
 
@@ -79,7 +79,7 @@
   img: transparent_placeholder.png
 - author: Y Tao, R Zhou#.
   title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
-  publisher: bioRxiv, under revision
+  publisher: bioRxiv, under revision at JACS Au
   link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
