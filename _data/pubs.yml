@@ -96,10 +96,14 @@
 - author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
   title: Actin depolymerization promotes axon regeneration by restoring axonal mitochondria transport in mouse models of optic neuropathy.
   year: 2026
-  sort_order: 202602
-  publisher: Accepted at Science Translational Medicine
+  sort_order: 202699
+  publisher: Science Translational Medicine
+  link: https://www.science.org/eprint/9ZNRVKVXEEARNARKQKI9/full?activationRedirect=/doi/full/10.1126/scitranslmed.adw0908#tab-contributors
+  page: 18,eadw0908
   type: 2
   img: transparent_placeholder.png
+  highlight:
+    cover_img: stm.2026.18.issue-838.largecover.jpg
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025
