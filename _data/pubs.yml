@@ -3,7 +3,7 @@
 # - author:
 #   title:
 #   year: [year]
-#   sort_order: [YYYYPP] where PP is priority (99=highlighted first, then 12-01 by month descending)
+#   sort_order: [YYYYPP] or [YYYYPP.S] where PP=99 for highlighted first (use .1 .2 for sub-order when multiple 99s), else 12-01 by month
 #   publisher:
 #   page:
 #   type:
@@ -11,6 +11,7 @@
 #     items:  # for multiple highlights with individual links
 #       - text: "media name"
 #         link: "url"
+#   author note: prefix a name with "~" to exclude from lab-member highlight and hide the ~ in display (e.g. "~J Smith")
 
 - author: S Zhang, J Fei, Y Zheng, R Zhou#.
   title: Tunable Chemical and Optical Control of ER-Plasma Membrane Contact Site Geometry and Dynamics with High-Fidelity Visualization
@@ -57,10 +58,10 @@
   link: https://www.science.org/doi/full/10.1126/sciadv.aeb0803
   type: 2
   year: 2026
-  sort_order: 202699
+  sort_order: 202699.2
   img: jinyu_fei_scienceadvances_26.png
+  cover_img: sciadv.2026.12.cover.jpg
   highlight:
-    cover_img: sciadv.2026.12.cover.jpg
     items:
       - text: Penn State News
         link: https://www.psu.edu/news/research/story/skeleton-gatekeeper-lining-brain-cells-could-guard-against-alzheimers
@@ -93,17 +94,16 @@
   publisher: bioRxiv
   type: 2
   img: yuanmin_analytical_chemistry_26.jpeg
-- author: L Li, X Feng, F Fang, J Fei, J Lu, H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
+- author: L Li, X Feng, F Fang, J Fei, J Lu, ~H Zhang, M Ždímalová, Y Yuan, Z Luo, H Huang, D Liu, F Huang, Y Zeng, F Bian, I.J You, L Liu, X Yan, M Li, Y Lin, Q Xie, A Krish, X Duan, J Goldberg, X Chen, M Braun, Z Lansky, Y Han, R Zhou, Y Hu#.
   title: Actin depolymerization promotes axon regeneration by restoring axonal mitochondria transport in mouse models of optic neuropathy.
   year: 2026
-  sort_order: 202699
+  sort_order: 202699.1
   publisher: Science Translational Medicine
   link: https://www.science.org/eprint/9ZNRVKVXEEARNARKQKI9/full?activationRedirect=/doi/full/10.1126/scitranslmed.adw0908#tab-contributors
   page: 18,eadw0908
+  img: scitranslmed.adw0908-f1.jpg
   type: 2
-  img: transparent_placeholder.png
-  highlight:
-    cover_img: stm.2026.18.issue-838.largecover.jpg
+  cover_img: stm.2026.18.issue-838.largecover.jpg
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2025

@@ -94,7 +94,11 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
     {% endif %}
 
     {% assign has_highlight_cover = false %}
-    {% if pub.highlight and pub.highlight.cover_img %}
+    {% assign so_str_check = pub.sort_order | append: "" %}
+    {% assign so_int_check = so_str_check | split: "." | first %}
+    {% assign so_tail_check = so_int_check | slice: -2, 2 %}
+    {% assign cover_img_check = pub.cover_img | default: pub.highlight.cover_img | default: "" | strip %}
+    {% if so_tail_check == "99" and cover_img_check != "" %}
       {% assign has_highlight_cover = true %}
     {% endif %}
     <div class="pub{% if layout == 'bottom' %} pub--bottom{% endif %}{% unless has_img %} pub--noimg{% endunless %}{% if has_highlight_cover %} pub--has-highlight-cover{% endif %}">
@@ -121,9 +125,19 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
           <p class="pub__meta">
             {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
             {%- for a in authors -%}
-              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+              {% assign a_stripped = a | strip %}
+              {% assign first_char = a_stripped | slice: 0, 1 %}
+              {% if first_char == "~" %}
+                {% assign skip_highlight = true %}
+                {% assign a_display = a_stripped | slice: 1, 100 | strip %}
+              {% else %}
+                {% assign skip_highlight = false %}
+                {% assign a_display = a_stripped %}
+              {% endif %}
+              {% assign name = a_display | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
 
               {% assign found_ug = false %}
+              {% unless skip_highlight %}
               {% for special in ug_author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -131,8 +145,10 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
 
               {% assign found = false %}
+              {% unless skip_highlight %}
               {% for special in author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -140,12 +156,13 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
               {% if found_ug %}
-                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+                <span class="pub__author pub__author--ug">{{ a_display }}</span>
               {% elsif found %}
-                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+                <span class="pub__author pub__author--highlight">{{ a_display }}</span>
               {% else %}
-                {{ a | strip }}
+                {{ a_display }}
               {% endif %}
               {% unless forloop.last %}, {% endunless %}
             {%- endfor -%}
@@ -167,9 +184,19 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
           <p class="pub__meta">
             {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
             {%- for a in authors -%}
-              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+              {% assign a_stripped = a | strip %}
+              {% assign first_char = a_stripped | slice: 0, 1 %}
+              {% if first_char == "~" %}
+                {% assign skip_highlight = true %}
+                {% assign a_display = a_stripped | slice: 1, 100 | strip %}
+              {% else %}
+                {% assign skip_highlight = false %}
+                {% assign a_display = a_stripped %}
+              {% endif %}
+              {% assign name = a_display | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
 
               {% assign found_ug = false %}
+              {% unless skip_highlight %}
               {% for special in ug_author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -177,8 +204,10 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
 
               {% assign found = false %}
+              {% unless skip_highlight %}
               {% for special in author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -186,13 +215,14 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
 
               {% if found_ug %}
-                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+                <span class="pub__author pub__author--ug">{{ a_display }}</span>
               {% elsif found %}
-                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+                <span class="pub__author pub__author--highlight">{{ a_display }}</span>
               {% else %}
-                {{ a | strip }}
+                {{ a_display }}
               {% endif %}
               {% unless forloop.last %}, {% endunless %}
             {%- endfor -%}
@@ -226,9 +256,19 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
           <p class="pub__meta">
             {%- assign authors = pub.author | replace: " and ", ", " | replace: ";", "," | split: "," -%}
             {%- for a in authors -%}
-              {% assign name = a | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
+              {% assign a_stripped = a | strip %}
+              {% assign first_char = a_stripped | slice: 0, 1 %}
+              {% if first_char == "~" %}
+                {% assign skip_highlight = true %}
+                {% assign a_display = a_stripped | slice: 1, 100 | strip %}
+              {% else %}
+                {% assign skip_highlight = false %}
+                {% assign a_display = a_stripped %}
+              {% endif %}
+              {% assign name = a_display | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
 
               {% assign found_ug = false %}
+              {% unless skip_highlight %}
               {% for special in ug_author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -236,8 +276,10 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
 
               {% assign found = false %}
+              {% unless skip_highlight %}
               {% for special in author_list %}
                 {% assign special_clean = special | split: "(" | first | strip | remove: "." | remove: "#" | downcase %}
                 {% if name == special_clean %}
@@ -245,12 +287,14 @@ Undergraduate highlight list (purple). Accept multiple variable names for conven
                   {% break %}
                 {% endif %}
               {% endfor %}
+              {% endunless %}
+
               {% if found_ug %}
-                <span class="pub__author pub__author--ug">{{ a | strip }}</span>
+                <span class="pub__author pub__author--ug">{{ a_display }}</span>
               {% elsif found %}
-                <span class="pub__author pub__author--highlight">{{ a | strip }}</span>
+                <span class="pub__author pub__author--highlight">{{ a_display }}</span>
               {% else %}
-                {{ a | strip }}
+                {{ a_display }}
               {% endif %}
               {% unless forloop.last %}, {% endunless %}
             {%- endfor -%}

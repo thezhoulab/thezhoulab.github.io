@@ -27,11 +27,17 @@ Parameters:
     {% if hlink != "" and hlink_lc != "not available" %}</a>{% endif %}
   {%- endif -%}
 </p>
-{%- if pub.highlight.cover_img -%}
-<div class="pub__highlight-cover">
-  <img src="/assets/images/pubs/{{ pub.highlight.cover_img }}" alt="Journal cover" class="pub__highlight-cover-img">
-</div>
 {%- endif -%}
+
+{%- comment -%}Cover image: show when sort_order integer part ends with 99 (prioritized pub for that year){%- endcomment -%}
+{%- assign so_str = pub.sort_order | append: "" -%}
+{%- assign so_int = so_str | split: "." | first -%}
+{%- assign so_tail = so_int | slice: -2, 2 -%}
+{%- assign cover_img_src = pub.cover_img | default: pub.highlight.cover_img | default: "" | strip -%}
+{%- if so_tail == "99" and cover_img_src != "" -%}
+<div class="pub__highlight-cover">
+  <img src="/assets/images/pubs/{{ cover_img_src }}" alt="Journal cover" class="pub__highlight-cover-img">
+</div>
 {%- endif -%}
 
 {%- if pub.selected -%}
