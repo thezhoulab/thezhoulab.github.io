@@ -13,6 +13,26 @@
 #         link: "url"
 #   author note: prefix a name with "~" to exclude from lab-member highlight and hide the ~ in display (e.g. "~J Smith")
 
+- author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
+  title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
+  year: 2026
+  sort_order: 202699.3
+  link: https://doi.org/10.1038/s41467-026-69658-9
+  publisher: Nature Communications
+  page: 17, 2156
+  type: 2
+  img: 2025_han.jpg
+  cover_img: han_ncomm.mp4
+
+- author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
+  title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
+  year: 2025
+  sort_order: 202507
+  link: https://doi.org/10.1101/2025.07.19.665678
+  publisher: bioRxiv
+  type: 2
+  img: 2025_han.jpg
+
 - author: S Zhang, J Fei, Y Zheng, R Zhou#.
   title: Tunable Chemical and Optical Control of ER-Plasma Membrane Contact Site Geometry and Dynamics with High-Fidelity Visualization
   year: 2026
@@ -104,14 +124,6 @@
   img: scitranslmed.adw0908-f1.jpg
   type: 2
   cover_img: stm.2026.18.issue-838.largecover.jpg
-- author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
-  title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
-  year: 2025
-  sort_order: 202507
-  link: https://doi.org/10.1101/2025.07.19.665678
-  publisher: bioRxiv, Accepted at Nature Communications
-  type: 2
-  img: 2025_han.jpg
 - author: J Gao, H Li, S Tan, R Zhou, TH Lee#.
   title: Roles of histone chaperone Nap1 and histone acetylation in regulating phase-separation of chromatin arrays.
   page: 16, 10672

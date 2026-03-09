@@ -35,8 +35,21 @@ Parameters:
 {%- assign so_tail = so_int | slice: -2, 2 -%}
 {%- assign cover_img_src = pub.cover_img | default: pub.highlight.cover_img | default: "" | strip -%}
 {%- if so_tail == "99" and cover_img_src != "" -%}
+{%- assign cover_ext = cover_img_src | split: "." | last | downcase -%}
 <div class="pub__highlight-cover">
+  {%- if cover_ext == "avi" or cover_ext == "mp4" or cover_ext == "webm" or cover_ext == "ogg" or cover_ext == "mov" -%}
+  <video class="pub__highlight-cover-img" controls loop muted playsinline>
+    <source src="/assets/images/pubs/{{ cover_img_src }}"
+      {%- if cover_ext == "mp4" %} type="video/mp4"
+      {%- elsif cover_ext == "webm" %} type="video/webm"
+      {%- elsif cover_ext == "ogg" %} type="video/ogg"
+      {%- elsif cover_ext == "mov" %} type="video/quicktime"
+      {%- elsif cover_ext == "avi" %} type="video/avi"
+      {%- endif -%}>
+  </video>
+  {%- else -%}
   <img src="/assets/images/pubs/{{ cover_img_src }}" alt="Journal cover" class="pub__highlight-cover-img">
+  {%- endif -%}
 </div>
 {%- endif -%}
 

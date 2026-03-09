@@ -5,7 +5,7 @@
 - name: Research & Innovation
   subs:
     - name: Publications
-      link: /pubs
+      link: /publications
     - name: Patents
       link: /patents
     - name: Research

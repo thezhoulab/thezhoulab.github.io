@@ -1,12 +1,12 @@
 ---
-permalink: /pubs
+permalink: /publications
 layout: black
 title: Publications
 ---
 
 
 <p class="hl"> #：corresponding author. </p>
-<p class="pub__author pub__author--ug"> Undergraduate students (hightlighted in purple) </p>
+<p class="pub__author pub__author--ug"> Undergraduate students (highlighted in purple) </p>
 {%- assign all_pubs = site.data.pubs | sort: 'year' -%}
 {%- assign pub_num = all_pubs.size -%}
 {%- comment -%}
@@ -41,13 +41,13 @@ Build highlight-author lists from `_data/team.yml`.
 {% assign ug_authours = ug_authours_str | append: "A Chakrabarti|" | split: "|" %}
 {% assign ug_authors = ug_authours %}
 
-{%- assign pubs_type2 = all_pubs | where: "type", "2" | sort: 'years' | reverse -%}
+{%- assign pubs_type2 = all_pubs | where: "type", "2" | sort: 'year' | reverse -%}
 <h1>Independent Career: </h1> 
 {% include publications/pubs_list.html pubs=pubs_type2 pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="1" sort_by_year="1" %}
 {%- assign pub_num = pub_num | minus: pubs_type2.size -%}
 
 <h1 class="pub_section_title pub_section_title--spaced">Prior to Penn State:</h1>
-{%- assign pubs_type1 = all_pubs | where: "type", "1" | sort: 'years' | reverse -%}
+{%- assign pubs_type1 = all_pubs | where: "type", "1" | sort: 'year' | reverse -%}
 <h2>Selected publications: </h2>
 {% include publications/pubs_list.html pubs=pubs_type1 pub_num=pub_num author_list=l_authors ug_author_list=ug_authors layout="left" group_by_year="0" sort_by_year="1" %}
 

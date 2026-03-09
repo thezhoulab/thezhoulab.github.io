@@ -9,13 +9,13 @@ permalink: /team
 <h1>Team</h1>
 	{% assign team = site.data.team %}
   {% for position in team %}
-    <div id="position">
+    <div class="position">
       <h2>{{ position[0] }}</h2>
       {% assign members = position[1] | sort: 'year' %}
     	{% for member in members %}
-	    	<div id="member">
+	    	<div class="member">
 	    		<img alt={{member.name}} class="avatar" src=/assets/images/team/{{member.img}}>
-	    		<div id="member-inf">
+	    		<div class="member-info">
 		      	<h2>{{ member.name }}</h2>
 		      	{% assign edus = member.education | split: "/" %}
 		      	{%- for edu in edus -%}

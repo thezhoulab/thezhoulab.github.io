@@ -1,10 +1,9 @@
 {% assign background=0 %}
 <div id="pubs">
 {%- for pub in pubs: -%}
-  <div class="pub" {% unless {{pub.img}} %} style="height: 100px; margin-bottom: -5px" {% endunless %}>
-    <div class="pub_left" {% unless {{pub.img}} %} style="width: 1000px;" {% endunless %}>
+  <div class="pub" {% unless pub.img %} style="height: 100px; margin-bottom: -5px" {% endunless %}>
+    <div class="pub_left" {% unless pub.img %} style="width: 1000px;" {% endunless %}>
       <p><a href={{pub.link}}><span>{{pub_num}}. {{pub.title}}</span></a></p>
-      {% assign other_author = pub.author | split: author %}
       <p>
   {% assign authors = pub.author | split: "," %}
 {% for a in authors %}
