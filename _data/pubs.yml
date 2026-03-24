@@ -24,11 +24,11 @@
   img: han_ncomm26.png
   cover_img: han_ncomm.mp4
   highlight:
-  items:
-    - text: Ebiotrade
-      link: https://m.ebiotrade.com/newsf/2026-3/20260310024156272.htm
-    - text: Clear Sky Science
-      link: https://www.clearskyscience.com/en/10.1038/s41467-026-69658-9/
+    items:
+      - text: Ebiotrade
+        link: https://m.ebiotrade.com/newsf/2026-3/20260310024156272.htm
+      - text: Clear Sky Science
+        link: https://www.clearskyscience.com/en/10.1038/s41467-026-69658-9/
 
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
