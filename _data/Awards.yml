@@ -2,6 +2,15 @@
 #   name: Yinqi Wang
 #   description: Brucher Paler Fay Scholarship
 #   img:
+
+- time: 2026/4
+  name: Yuanmin Zheng
+  description: Best Art In Engineering, 22nd Annual College of Engineering Research Symposium
+  img: Yuanmin_CERS_2026_award1.jpg
+- time: 2026/4
+  name: Yuanmin Zheng
+  description: Best Poster Presentation, 22nd Annual College of Engineering Research Symposium
+  img: Yuanmin_CERS_2026_award2.jpg
 - time: 2025/5
   name: Han Zhang
   description: Best Image Poster Award, 2025 Single-Molecule MiniSymposium
