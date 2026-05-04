@@ -68,6 +68,16 @@
   page: 123 (5) e2532504123
   img: pnas_26.png
 
+- author: Y Tao, R Zhou#.
+  title: "CLaSSiNet: A Computational Framework for High-Resolution Classification and Spatial Mapping of Heterogeneous Biological Network Architectures"
+  year: 2026
+  sort_order: 202604
+  type: 2
+  publisher: JACS Au
+  page: 6 (4), 2637-2655
+  link: https://doi.org/10.1021/jacsau.5c01775
+  img: transparent_placeholder.png
+
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
   title: '"Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II'
   publisher: bioRxiv, in revision at Nature Communications
