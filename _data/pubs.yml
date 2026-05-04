@@ -76,7 +76,7 @@
   publisher: JACS Au
   page: 6 (4), 2637-2655
   link: https://doi.org/10.1021/jacsau.5c01775
-  img: transparent_placeholder.png
+  img: yuan_jacsau_26.tif
 
 - author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
   title: '"Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II'
@@ -116,12 +116,12 @@
   img: transparent_placeholder.png
 - author: Y Tao, R Zhou#.
   title: "CLaSSiNet: A Computational Framework for Quantitative Classification of Nanoscale Network Architectures from Super-Resolution Microscopy."
-  publisher: bioRxiv, under revision at JACS Au
+  publisher: bioRxiv
   link: https://www.biorxiv.org/content/10.64898/2025.12.20.695699v1
   type: 2
   year: 2025
   sort_order: 202512
-  img: transparent_placeholder.png
+  img: yuan_biorxiv_26.png
 - author: Y Zheng, J Fei, A Chakrabarti, R Zhou#.
   title: A chemically inducible multimerization system for tunable and background-free RTK activation.
   year: 2025
