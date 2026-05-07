@@ -24,7 +24,7 @@ permalink: /team
 		      	{% if member.interest %}
 		      	<p>Research Interest: {{ member.interest }}</p>
 		      	{% endif %}
-		      	<p>Email: {{member.email}}</p>
+		      	{% if member.email %}<p>Email: {{member.email}}</p>{% endif %}
 		      	{% if member.current %}
 		      	<p>Current Position: {{ member.current }}</p>
 		      	{% endif %}

@@ -14,12 +14,6 @@ Research Staff Assistant:
 # Postdoctoral Researcher:
 
 Graduate Student:
-  - name: Han Zhang
-    education: M.S. Pharmaceutical Science, Peking University./B.S. Medical Science, Peking University. 
-    interest: Developing novel fluorescent probes and super-resolution imaging methods
-    img: Han_Zhang.jpeg
-    email: hfz5128@psu.edu
-    year: 2019
   - name: Haopeng Yang
     education: B.S. Chemistry, Nankai University
     interest: Chemical Biology, Protein liquid-liquid phase separation, Super-resolution imaging 
@@ -120,6 +114,10 @@ Undergraduate Student:
 
 
 Alumni:
+  - name: Han Zhang
+    education: M.S. Pharmaceutical Science, Peking University./B.S. Medical Science, Peking University.
+    interest: Developing novel fluorescent probes and super-resolution imaging methods
+    img: Han_Zhang.jpeg
   - name: Hongyun Li
     education: Ph.D. Chemistry, Wuhan University
     interest: T-Cell activation, Super-resolution imaging
