@@ -20,12 +20,6 @@ Graduate Student:
     img: Haopeng_Yang.png
     email: hqy5226@psu.edu
     year: 2019
-  - name: Jinyu Fei
-    education: B.S. Pharmaceutical Science, Fudan University
-    interest: Membrane-associated periodic skeleton, Receptor tyrosine kinase, Super-resolution imaging
-    img: Jinyu_Fei.png
-    email: jzf5579@psu.edu
-    year: 2019
   - name: Yuan Tao
     education: M.S. Mathematical, Computational, and Systems Biology, UCI./B.S. Computer Science and Technology, Zhejiang University
     interest: Super-resolution imaging, Spatial transcriptomics, Neurobiology, Neurodegenerative diseases, Aging
@@ -101,11 +95,6 @@ Undergraduate Student:
     major: Chemistry
     img: Ebenezer_Karikari.jpeg
     email: evk5537@psu.edu
-  - name: Caden LaLonde
-    education: Class of 2026, Penn State University
-    interest: Virotherapy and oncology
-    email: cgl5200@psu.edu
-    img: Caden_LaLonde.jpg
   - name: Joshua Lei 
     education: Class of 2028, Penn State University
     major: Chemical Engineering
@@ -114,15 +103,22 @@ Undergraduate Student:
 
 
 Alumni:
+  - name: Jinyu Fei
+    education: Ph.D. Chemistry, Penn State University./B.S. Pharmaceutical Science, Fudan University
+    interest: Membrane-associated periodic skeleton, Receptor tyrosine kinase, Super-resolution imaging
+    img: Jinyu_Fei.png
+    email: jzf5579@psu.edu
+    current: Scientist at XDC
   - name: Han Zhang
-    education: M.S. Pharmaceutical Science, Peking University./B.S. Medical Science, Peking University.
+    education: Ph.D. Chemistry, Penn State University./M.S. Pharmaceutical Science, Peking University./B.S. Medical Science, Peking University.
     interest: Developing novel fluorescent probes and super-resolution imaging methods
     img: Han_Zhang.jpeg
+    current: Postdoctoral Researcher at Rutgers University
   - name: Hongyun Li
     education: Ph.D. Chemistry, Wuhan University
     interest: T-Cell activation, Super-resolution imaging
     img: Hongyun_Li.jpg
-    current: Emory University
+    current: Postdoctoral Researcher at Emory University
   - name: Poom Chantarapornrat
     education: Class of 2023, Penn State University
     major: Chemistry 
@@ -139,3 +135,9 @@ Alumni:
     interest: Medicinal Biochemistry & Neurodegenerative Diseases
     img: Milap_Atul_Mistry.jpg
     current: MS1 at Penn State College of Medicine
+  - name: Caden LaLonde
+    education: Class of 2026, Penn State University
+    interest: Virotherapy and oncology
+    email: cgl5200@psu.edu
+    img: Caden_LaLonde.jpg
+    current: Graduate Student at UCSF
