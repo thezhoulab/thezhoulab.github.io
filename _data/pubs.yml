@@ -78,10 +78,10 @@
   link: https://doi.org/10.1021/jacsau.5c01775
   img: yuan_jacsau_26.jpg
 
-- author: Q Zhang, HA Hardtke, Y Zheng, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
-  title: '"Zipper" Grammar of CTD Governs the Spatial Programing of the Transcription Cycle of RNA Polymerase II'
-  publisher: bioRxiv, in revision at Nature Communications
-  link: https://www.biorxiv.org/content/10.64898/2026.01.02.697396v1
+- author: Q Zhang, HA Hardtke, Y Zheng, H Yang, A Gerber, MKV Ramani, E Escobar, J Brodbelt, R Zhou, YJ Zhang#
+  title: A tunable CTD grammar governs the spatial programming of the transcription cycle
+  publisher: Nature Communications
+  link: https://www.nature.com/articles/s41467-026-72994-5
   type: 2
   year: 2026
   sort_order: 202601
@@ -105,6 +105,16 @@
         link: https://www.eurekalert.org/multimedia/1114795
       - text: Medical Xpress
         link: https://medicalxpress.com/news/2026-02-hidden-neuron-gatekeeper-alzheimer-buildup.html
+      - text: EurekAlert
+        link: https://www.newsweek.com/scientists-discover-hidden-brain-structure-that-could-help-fight-alzheimers-12209946
+      - text: Science Daily
+        link: https://www.sciencedaily.com/releases/2026/07/260714225542.htm
+      - text: Academic Jobs
+        link: https://www.academicjobs.com/en-us/higher-education-news/brain-cell-skeleton-guards-alzheimers-penn-state-study-4460
+      - text: Quantum Zeitgeist
+        link: https://quantumzeitgeist.com/penn-state-brain-cells-neurodegenerative-disease/
+      - text: SciTech Daily
+        link: https://scitechdaily.com/scientists-discover-hidden-gatekeeper-inside-brain-cells-linked-to-alzheimers/
 
 - author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
   title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.

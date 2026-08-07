@@ -120,22 +120,26 @@ Alumni:
     img: Hongyun_Li.jpg
     current: Postdoctoral Researcher at Emory University
   - name: Poom Chantarapornrat
+    ug: true  # former undergrad → purple on pubs page
     education: Class of 2023, Penn State University
     major: Chemistry 
     img: Poom_Chantarapornrat.jpeg
     email: poom@psu.edu
     current: Graduate Student at Boston University
   - name: Mengde Liu  
+    ug: true  # former undergrad → purple on pubs page
     education: B.S. Biomedical Engineering, Penn State University
     interest: Machine learning, Super-resolution imaging methods
     img: Mengde_Liu.jpeg
     current: Graduate Student at Duke University
   - name: Milap Atul Mistry
+    ug: true  # former undergrad → purple on pubs page
     education: Class of 2025, Penn State University
     interest: Medicinal Biochemistry & Neurodegenerative Diseases
     img: Milap_Atul_Mistry.jpg
     current: MS1 at Penn State College of Medicine
   - name: Caden LaLonde
+    ug: true  # former undergrad → purple on pubs page
     education: Class of 2026, Penn State University
     interest: Virotherapy and oncology
     email: cgl5200@psu.edu

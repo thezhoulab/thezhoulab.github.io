@@ -13,6 +13,7 @@ title: Publications
 Build highlight-author lists from `_data/team.yml`.
 - `l_authors`: non-undergraduate team members (format: "F Last")
 - `ug_authours`: undergraduate students only (same format)
+- Undergrads: role contains "undergraduate", OR person.ug: true (for Alumni undergrads)
 {%- endcomment -%}
 {% assign l_authors_str = "" %}
 {% assign ug_authours_str = "" %}
@@ -28,7 +29,7 @@ Build highlight-author lists from `_data/team.yml`.
         {% assign last = parts | last %}
         {% assign initial = first | slice: 0, 1 %}
         {% assign author = initial | append: " " | append: last %}
-        {%- if role_name_lc contains "undergraduate" -%}
+        {%- if role_name_lc contains "undergraduate" or person.ug -%}
           {% assign ug_authours_str = ug_authours_str | append: author | append: "|" %}
         {%- else -%}
           {% assign l_authors_str = l_authors_str | append: author | append: "|" %}

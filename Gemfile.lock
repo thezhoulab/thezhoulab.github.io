@@ -79,6 +79,7 @@ GEM
 PLATFORMS
   universal-darwin-20
   universal-darwin-21
+  universal-darwin-24
   x64-mingw32
 
 DEPENDENCIES
@@ -91,4 +92,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.26
+   2.3.15
