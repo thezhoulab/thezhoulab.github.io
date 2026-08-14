@@ -13,6 +13,16 @@
 #         link: "url"
 #   author note: prefix a name with "~" to exclude from lab-member highlight and hide the ~ in display (e.g. "~J Smith")
 
+
+- author: Y Tao, R Zhou#.
+  title: Tunable Chemical and Optical Modulation of ER-Plasma Membrane Contact-Site Geometry, Dynamics, and Protein Recruitment with High-Fidelity Visualization
+  year: 2026
+  sort_order: 202608
+  type: 2
+  publisher: Analytical Chemistry
+  link: https://pubs.acs.org/ancham/article/doi/10.1021/acs.analchem.6c03857/5251947/Tunable-Chemical-and-Optical-Modulation-of-ER
+  img: shaoqing_zhang_AC26.png
+
 - author: H Zhang, Y Yao, X Wang, Y Zheng, S Zhang, Y Tao, H Yang, Y Wang, M Liu, M Feric, R Zhou#.
   title: FLEXTAG:A Small and Self-renewable Protein Labeling System for Anti-fading Multi-color Super-resolution Imaging.
   year: 2026
@@ -44,7 +54,7 @@
   year: 2026
   sort_order: 202601
   type: 2
-  publisher: bioRxiv, under review at JACS Au
+  publisher: bioRxiv
   link: https://www.biorxiv.org/content/10.64898/2026.01.28.701813v1.full
   img: transparent_placeholder.png
 
@@ -84,8 +94,9 @@
   link: https://www.nature.com/articles/s41467-026-72994-5
   type: 2
   year: 2026
-  sort_order: 202601
-  img: transparent_placeholder.png
+  sort_order: 202607
+  page: 17, 6356
+  img: colab_NC26.webp
 
 - author: J Fei, Y Zheng, C LaLonde, Y Tao, R Zhou#.
   title: Membrane-associated periodic skeleton regulates major forms of endocytosis in neurons through a signaling-driven positive feedback loop.
