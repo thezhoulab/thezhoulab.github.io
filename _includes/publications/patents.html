@@ -23,6 +23,15 @@
         <span class="pub__emph">{{ patent.publisher }}</span>
         <span> {{ patent.page }}</span>
       </p>
+      {%- if patent.also -%}
+        {%- for app in patent.also -%}
+      <p class="pub__meta">
+        <span class="pub__emph">{{ app.publisher }}</span>
+        <span> {{ app.page }}</span>
+        {%- if app.filed -%}<span> (filed {{ app.filed }})</span>{%- endif -%}
+      </p>
+        {%- endfor -%}
+      {%- endif -%}
     </div>
     {% assign patent_num = patent_num | minus: 1 %}
   {%- endfor -%}

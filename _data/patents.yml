@@ -1,8 +1,19 @@
+- author: R Zhou, H Yang
+  title: Methods and Materials for Treating Cancers Driven by an Oncogenic Kinase Fusion
+  year: 2026
+  publisher: US Provisional Patent App.
+  page: No.64/177,510
+  type: patent
+
 - author: R Zhou, H Zhang
-  title: Polypeptide Labeling system
+  title: Polypeptide Labeling System
   year: 2025
-  publisher: US Provisional Patent App
+  publisher: US Provisional Patent App.
   page: No.63/836,663
+  also:
+    - publisher: PCT Patent App.
+      page: No. PCT/US2026/034877
+      filed: June 30, 2026
   type: patent
 
 - author: R Zhou, J Fei, Y Zheng
